@@ -163,7 +163,7 @@ export default function DestinationsShowcase() {
     const tabUnderlineVariants = {
         hidden: { width: 0 },
         visible: {
-            width: '100%',
+            width: '90%',
             transition: {
                 duration: 0.3
             }
