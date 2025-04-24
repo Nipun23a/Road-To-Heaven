@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import DestinationsShowcase from "@/components/DestinationShowcase";
 import ExperiencesSection from "@/components/ExperienceSection";
+import TestimonialsGallerySection from "@/components/TestimonialsGallerySection";
 
 
 
@@ -11,6 +12,7 @@ export default function Home() {
 
           <DestinationsShowcase/>
           <ExperiencesSection/>
+          <TestimonialsGallerySection/>
 
 
           {/* Additional content sections can go here */}
