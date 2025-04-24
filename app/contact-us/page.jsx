@@ -165,7 +165,7 @@ export default function ContactUs() {
                                     icon: <MapPin className="h-8 w-8 text-teal-500" />,
                                     title: "Visit Us",
                                     details: [
-                                        "42 Galle Road, Colombo 03,",
+                                        "Pitipana - Thalagala Rd, Homagama,",
                                         "Sri Lanka"
                                     ],
                                     description: "Our office is located in the heart of Colombo."
@@ -439,7 +439,7 @@ export default function ContactUs() {
                     >
                         <h2 className={`${whisper.className} text-5xl md:text-6xl text-white mb-6`}>Ready To Explore Sri Lanka?</h2>
                         <p className={`${montserrat.className} text-xl text-white/90 max-w-3xl mx-auto mb-8`}>
-                            Let's start planning your dream journey to the Pearl of the Indian Ocean
+                            Let's start planning your dream journey with AI Trip Planner to the Pearl of the Indian Ocean
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <motion.button
