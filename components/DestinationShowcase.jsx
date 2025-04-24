@@ -35,7 +35,7 @@ export default function DestinationsShowcase() {
                 id: 2,
                 name: 'Mirissa Beach',
                 location: 'Southern Province',
-                image: '/images/mirissa.jpg',
+                image: '/images/beach.jpg',
                 rating: 4.7,
                 popularity: 'Medium',
                 description: 'Famous for whale watching and surfing, this crescent-shaped beach offers stunning sunsets and a relaxed atmosphere.'
@@ -122,7 +122,7 @@ export default function DestinationsShowcase() {
                 id: 2,
                 name: 'Kitulgala',
                 location: 'Western Province',
-                image: '/images/kitulgala.jpg',
+                image: '/images/kithulgala.jpg',
                 rating: 4.8,
                 popularity: 'Medium',
                 description: 'Premier white-water rafting location with rainforest canopy adventures and natural swimming pools.'
