@@ -1,5 +1,9 @@
 import { Geist, Geist_Mono,Poppins,Montserrat,Whisper } from "next/font/google";
 import "./globals.css";
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import Navigation from "@/components/Navigation"; // Adjust path as needed
 
 export  const geistSans = Geist({

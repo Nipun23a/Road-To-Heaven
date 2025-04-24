@@ -34,19 +34,19 @@ export default function NavigationBar() {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
-                        <span className={`${whisper.className} text-5xl whisper font-bold  text-black transition-colors duration-300`}>
+                        <span className={`${whisper.className} text-5xl whisper ${isScrolled? 'text-black' : 'text-white'} font-bold transition-colors duration-300`}>
                           Road to Heaven
                         </span>
                     </div>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:block">
-                        <div className={`ml-10 flex items-center space-x-8 ${montserrat.className}`}>
+                        <div className={`ml-10 flex items-center space-x-8 ${montserrat.className} `}>
                             {['Home', 'About Us', 'Places', 'Hotels and Flights', 'Contact Us'].map((item) => (
                                 <a
                                     key={item}
                                     href={`#${item.toLowerCase().replace(/ /g, '-')}`}
-                                    className={`text-lg font-light text-black transition-colors duration-300 hover:scale-105`}
+                                    className={`text-lg font-light ${isScrolled? 'text-black' : 'text-white'} transition-colors duration-300 hover:scale-105`}
                                 >
                                     {item}
                                 </a>
