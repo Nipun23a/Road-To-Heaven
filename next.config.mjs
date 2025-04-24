@@ -4,6 +4,9 @@ const nextConfig = {
         unoptimized: true,
         domains: [],
     },
+    experimental:{
+        appDir:true,
+    }
 };
 
 export default nextConfig;
