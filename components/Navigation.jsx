@@ -28,7 +28,7 @@ export default function NavigationBar() {
 
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${
-            isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+            isScrolled ? ' bg-gradient-to-b from-teal-50 to-white  shadow-md py-2' : 'bg-transparent py-4'
         }`}>
             <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-2">
                 <div className="flex items-center justify-between h-16">
