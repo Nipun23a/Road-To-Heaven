@@ -5,7 +5,8 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer"; // Adjust path as needed
+import Footer from "@/components/Footer";
+import Preloader from "@/components/Preloader"; // Adjust path as needed
 
 export  const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
         <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+        <Preloader/>
         <Navigation />
         <main>
             {children}
