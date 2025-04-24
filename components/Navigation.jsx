@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X, User, Map } from 'lucide-react';
-import {Whisper} from "next/font/google";
-import {montserrat} from "@/app/layout";
-
+import { Whisper } from "next/font/google";
+import { montserrat } from "@/app/layout";
+import Link from 'next/link'; // Using Link component for app directory routing
 
 const whisper = Whisper({ subsets: ['latin'], weight: '400' });
 
@@ -27,15 +27,13 @@ export default function NavigationBar() {
     }, []);
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${
-            isScrolled ? ' bg-gradient-to-b from-teal-50 to-white  shadow-md py-2' : 'bg-transparent py-4'
-        }`}>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? ' bg-gradient-to-b from-teal-50 to-white  shadow-md py-2' : 'bg-transparent py-4'}`}>
             <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-2">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
-                        <span className={`${whisper.className} text-5xl whisper ${isScrolled? 'text-black' : 'text-white'} font-bold transition-colors duration-300`}>
-                          Road to Heaven
+                        <span className={`${whisper.className} text-5xl whisper ${isScrolled ? 'text-black' : 'text-white'} font-bold transition-colors duration-300`}>
+                            Road to Heaven
                         </span>
                     </div>
 
@@ -43,13 +41,13 @@ export default function NavigationBar() {
                     <div className="hidden md:block">
                         <div className={`ml-10 flex items-center space-x-8 ${montserrat.className} `}>
                             {['Home', 'About Us', 'Places', 'Hotels and Flights', 'Contact Us'].map((item) => (
-                                <a
+                                <Link
                                     key={item}
-                                    href={`#${item.toLowerCase().replace(/ /g, '-')}`}
-                                    className={`text-lg font-light ${isScrolled? 'text-black' : 'text-white'} transition-colors duration-300 hover:scale-105`}
+                                    href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/ /g, '-')}`}
+                                    className={`text-lg font-light ${isScrolled ? 'text-black' : 'text-white'} transition-colors duration-300 hover:scale-105`}
                                 >
                                     {item}
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -69,8 +67,7 @@ export default function NavigationBar() {
                     <div className="md:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className={`inline-flex items-center justify-center p-2 rounded-md text-black 
-                             focus:outline-none transition-colors duration-300`}
+                            className={`inline-flex items-center justify-center p-2 rounded-md ${isScrolled? 'text-black' : 'text-white'} focus:outline-none transition-colors duration-300`}
                         >
                             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                         </button>
@@ -82,13 +79,13 @@ export default function NavigationBar() {
             <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
                 <div className={`px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg rounded-b-lg ${montserrat.className}`}>
                     {['Home', 'About Us', 'Places', 'Hotels and Flights', 'Contact Us'].map((item) => (
-                        <a
+                        <Link
                             key={item}
-                            href={`#${item.toLowerCase().replace(/ /g, '-')}`}
+                            href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/ /g, '-')}`}
                             className="text-gray-700 hover:bg-teal-50 hover:text-teal-600 block px-3 py-4 rounded-md text-lg font-medium border-b border-gray-100 transition-all duration-200"
                         >
                             {item}
-                        </a>
+                        </Link>
                     ))}
                     <div className="flex flex-col space-y-3 mt-4 px-3 py-4">
                         <button className="bg-teal-500 hover:bg-teal-600 text-white px-4 py-3 rounded-full text-lg font-semibold flex items-center justify-center transition-all duration-300">

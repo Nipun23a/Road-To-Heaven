@@ -13,7 +13,7 @@ export default function Preloader() {
         const progressSteps = [20, 40, 60, 80, 100];
         let currentStep = 0;
 
-        const stepInterval = 3000;
+        const stepInterval = 2000;
 
         const timer = setInterval(() => {
             setProgress(progressSteps[currentStep]);
