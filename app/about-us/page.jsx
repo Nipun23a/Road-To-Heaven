@@ -276,7 +276,7 @@ export default function AboutUs() {
                             <div className="group">
                                 <div className="relative h-96 rounded-lg overflow-hidden shadow-lg mb-4">
                                     <Image
-                                        src="/images/testimonial-2.jpg"
+                                        src="/images/author.png"
                                         alt="Amara Perera"
                                         fill
                                         className="object transition-transform duration-500 group-hover:scale-110"
@@ -284,8 +284,7 @@ export default function AboutUs() {
                                     <div
                                         className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-70"></div>
                                     <div className="absolute bottom-0 left-0 p-6">
-                                        <h3 className={`${montserrat.className} text-2xl font-bold text-white`}>Amara
-                                            Perera</h3>
+                                        <h3 className={`${montserrat.className} text-2xl font-bold text-white`}>B.H. Dewdunu Janapriya</h3>
                                         <p className={`${montserrat.className} text-teal-300`}>Founder & CEO</p>
                                     </div>
                                 </div>
