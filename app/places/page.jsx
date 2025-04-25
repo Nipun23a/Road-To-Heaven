@@ -303,7 +303,7 @@ export default function Places(){
     return(
         <>
             {/* Hero Section */}
-            <div className="relative w-full h-[70vh] overflow-hidden">
+            <div className="relative w-full h-[60vh] overflow-hidden">
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <Image

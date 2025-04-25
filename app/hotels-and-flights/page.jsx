@@ -210,11 +210,11 @@ const fetchFlights = async (from, to, departureDate) => {
         return(
             <div className="bg-gray-50 min-h-screen">
                 {/* Hero Section */}
-                <div className="relative w-full h-[40vh] overflow-hidden">
+                <div className="relative w-full h-[60vh] overflow-hidden">
                     {/* Background Image */}
                     <div className="absolute inset-0">
                         <Image
-                            src="/api/placeholder/1600/900"
+                            src="/images/sigiriya.jpg"
                             alt="Sri Lanka travel"
                             fill
                             priority
@@ -247,6 +247,7 @@ const fetchFlights = async (from, to, departureDate) => {
                 </div>
 
                 {/* Main Content */}
+                <div className="mt-10"></div>
                 <div className="container mx-auto px-4 py-8 -mt-8">
                     <div className="bg-white rounded-xl shadow-lg p-6">
                         {/* Tabs */}
@@ -653,19 +654,19 @@ const fetchFlights = async (from, to, departureDate) => {
                         {[
                             {
                                 name: 'Sigiriya Rock Fortress',
-                                image: '/api/placeholder/600/400',
+                                image: '/images/sigiriya.jpg',
                                 description: 'Ancient rock fortress with frescoes and panoramic views',
                                 location: 'Central Province'
                             },
                             {
                                 name: 'Galle Fort',
-                                image: '/api/placeholder/600/400',
+                                image: '/images/unawatuna.jpg',
                                 description: 'UNESCO World Heritage site with colonial architecture',
                                 location: 'Southern Province'
                             },
                             {
                                 name: 'Ella Train Journey',
-                                image: '/api/placeholder/600/400',
+                                image: '/images/ella-rock.jpg',
                                 description: 'Scenic train route through tea plantations and mountains',
                                 location: 'Uva Province'
                             }

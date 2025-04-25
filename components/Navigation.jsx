@@ -32,7 +32,8 @@ export default function NavigationBar() {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
-                        <span className={`${whisper.className} text-5xl whisper ${isScrolled ? 'text-black' : 'text-white'} font-bold transition-colors duration-300`}>
+                        <span
+                            className={`${whisper.className} text-5xl whisper ${isScrolled ? 'text-black' : 'text-white'} font-bold transition-colors duration-300`}>
                             Road to Heaven
                         </span>
                     </div>
@@ -54,22 +55,29 @@ export default function NavigationBar() {
 
                     {/* CTA and User Profile */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <button className={`${montserrat.className} bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-full text-lg font-semibold flex items-center transition-all duration-300 hover:shadow-lg transform hover:scale-105`}>
-                            <Map className="mr-2 h-5 w-5" />
+                        <Link
+                            href="/plan-trip"
+                            className={`${montserrat.className} bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-full text-lg font-semibold flex items-center transition-all duration-300 hover:shadow-lg transform hover:scale-105`}
+                        >
+                            <Map className="mr-2 h-5 w-5"/>
                             Plan My Trip
-                        </button>
-                        <button className="bg-white text-teal-600 p-2 rounded-full hover:bg-teal-100 transition-colors duration-300">
-                            <User className="h-6 w-6" />
-                        </button>
+                        </Link>
+
+                        <Link
+                            href="/profile"
+                            className="bg-white text-teal-600 p-2 rounded-full hover:bg-teal-100 transition-colors duration-300"
+                        >
+                            <User className="h-6 w-6"/>
+                        </Link>
                     </div>
 
                     {/* Mobile menu button */}
                     <div className="md:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className={`inline-flex items-center justify-center p-2 rounded-md ${isScrolled? 'text-black' : 'text-white'} focus:outline-none transition-colors duration-300`}
+                            className={`inline-flex items-center justify-center p-2 rounded-md ${isScrolled ? 'text-black' : 'text-white'} focus:outline-none transition-colors duration-300`}
                         >
-                            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                            {isOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
                         </button>
                     </div>
                 </div>
