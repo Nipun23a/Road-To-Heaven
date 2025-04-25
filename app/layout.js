@@ -6,7 +6,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Preloader from "@/components/Preloader"; // Adjust path as needed
+import Preloader from "@/components/Preloader";
+// Adjust path as needed
 
 export  const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -45,6 +46,7 @@ export default function RootLayout({ children }) {
         <main>
             {children}
         </main>
+
         <Footer/>
         </body>
         </html>

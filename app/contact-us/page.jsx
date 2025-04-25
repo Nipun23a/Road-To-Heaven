@@ -426,41 +426,6 @@ export default function ContactUs() {
                     </motion.div>
                 </div>
             </section>
-
-            {/* Call to Action */}
-            <section className="py-16 bg-teal-600">
-                <div className="container mx-auto px-4">
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={fadeInUp}
-                        className="max-w-4xl mx-auto text-center"
-                    >
-                        <h2 className={`${whisper.className} text-5xl md:text-6xl text-white mb-6`}>Ready To Explore Sri Lanka?</h2>
-                        <p className={`${montserrat.className} text-xl text-white/90 max-w-3xl mx-auto mb-8`}>
-                            Let's start planning your dream journey with AI Trip Planner to the Pearl of the Indian Ocean
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className={`${montserrat.className} bg-white text-teal-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-lg`}
-                            >
-                                Plan My Trip
-                            </motion.button>
-
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className={`${montserrat.className} bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300`}
-                            >
-                                View Destinations
-                            </motion.button>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
         </>
     );
 }
