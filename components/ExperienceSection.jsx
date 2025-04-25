@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {Calendar, Clock, Award, ArrowRight, Map} from 'lucide-react';
 import { montserrat, whisper } from "@/app/layout";
+import Link from "next/link";
 
 export default function ExperiencesSection() {
     const [mounted, setMounted] = useState(false);
@@ -224,10 +225,11 @@ export default function ExperiencesSection() {
                             </p>
                         </div>
                         <div className="flex-shrink-0">
-                            <button className={`${montserrat.className} bg-white text-teal-600 hover:bg-teal-50 px-6 py-4 rounded-lg font-medium text-lg flex items-center shadow-lg hover:shadow-xl transition-all duration-300`}>
+
+                            <Link className={`${montserrat.className} bg-white text-teal-600 hover:bg-teal-50 px-6 py-4 rounded-lg font-medium text-lg flex items-center shadow-lg hover:shadow-xl transition-all duration-300`} href='/plan-trip'>
                                 <Map size={20} className="mr-2" />
                                 Plan Custom Trip
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </motion.div>

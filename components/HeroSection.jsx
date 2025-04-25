@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import {montserrat, whisper} from "@/app/layout";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export default function HeroSection() {
     const [mounted, setMounted] = useState(false);
@@ -137,26 +138,35 @@ export default function HeroSection() {
                                                 {slide.description}
                                             </motion.p>
 
+
                                             <motion.div
                                                 variants={itemVariants}
                                                 className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6"
                                             >
-                                                <motion.button
-                                                    whileHover={{ scale: 1.05 }}
-                                                    whileTap={{ scale: 0.95 }}
-                                                    className={`${montserrat.className} bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-full text-lg font-semibold flex items-center transition-all duration-300 hover:shadow-lg`}
-                                                >
-                                                    Plan Your Sri Lanka Trip
-                                                    <ArrowRight className="ml-2 h-5 w-5"/>
-                                                </motion.button>
+                                                <Link href="/plan-trip" passHref>
+                                                    <motion.button
+                                                        whileHover={{scale: 1.05}}
+                                                        whileTap={{scale: 0.95}}
+                                                        className={`${montserrat.className} bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-full text-lg font-semibold flex items-center transition-all duration-300 hover:shadow-lg`}
+                                                    >
+                                                        Plan Your Sri Lanka Trip
+                                                        <ArrowRight className="ml-2 h-5 w-5"/>
+                                                    </motion.button>
+                                                </Link>
 
-                                                <motion.button
-                                                    whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.9)', color: '#0d9488' }}
-                                                    whileTap={{ scale: 0.95 }}
-                                                    className={`${montserrat.className} bg-transparent border-2 border-white text-white hover:bg-white hover:text-teal-600 px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300`}
-                                                >
-                                                    Explore Destinations
-                                                </motion.button>
+                                                <Link href="/places" passHref>
+                                                    <motion.button
+                                                        whileHover={{
+                                                            scale: 1.05,
+                                                            backgroundColor: 'rgba(255,255,255,0.9)',
+                                                            color: '#0d9488'
+                                                        }}
+                                                        whileTap={{scale: 0.95}}
+                                                        className={`${montserrat.className} bg-transparent border-2 border-white text-white hover:bg-white hover:text-teal-600 px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300`}
+                                                    >
+                                                        Explore Destinations
+                                                    </motion.button>
+                                                </Link>
                                             </motion.div>
                                         </div>
                                     </motion.div>
@@ -169,15 +179,18 @@ export default function HeroSection() {
 
             {/* Decorative floating elements */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 overflow-hidden">
-                <div className="floating-element w-24 h-24 bg-teal-500/10 rounded-full absolute top-1/4 left-1/4 animate-float-slow"></div>
-                <div className="floating-element w-16 h-16 bg-white/10 rounded-full absolute top-2/3 right-1/4 animate-float"></div>
-                <div className="floating-element w-32 h-32 bg-teal-300/10 rounded-full absolute bottom-1/4 right-1/3 animate-float-reverse"></div>
+                <div
+                    className="floating-element w-24 h-24 bg-teal-500/10 rounded-full absolute top-1/4 left-1/4 animate-float-slow"></div>
+                <div
+                    className="floating-element w-16 h-16 bg-white/10 rounded-full absolute top-2/3 right-1/4 animate-float"></div>
+                <div
+                    className="floating-element w-32 h-32 bg-teal-300/10 rounded-full absolute bottom-1/4 right-1/3 animate-float-reverse"></div>
             </div>
 
             {/* Scroll indicator with animation */}
             <motion.div
                 className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{opacity: 0, y: 20}}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.6 }}
             >

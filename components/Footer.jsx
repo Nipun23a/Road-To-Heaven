@@ -5,6 +5,7 @@ import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, Map, ArrowUp } from
 import { whisper } from "@/app/layout";
 import { montserrat } from "@/app/layout";
 import {motion} from "framer-motion";
+import Link from "next/link";
 
 export default function Footer() {
     const [email, setEmail] = useState('');
@@ -50,21 +51,24 @@ export default function Footer() {
                             Ocean
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <motion.button
-                                whileHover={{scale: 1.05}}
-                                whileTap={{scale: 0.95}}
-                                className={`${montserrat.className} bg-white text-teal-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-lg`}
-                            >
-                                Plan My Trip
-                            </motion.button>
-
-                            <motion.button
-                                whileHover={{scale: 1.05}}
-                                whileTap={{scale: 0.95}}
-                                className={`${montserrat.className} bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300`}
-                            >
-                                View Destinations
-                            </motion.button>
+                            <Link href="/plan-trip" passHref>
+                                <motion.button
+                                    whileHover={{scale: 1.05}}
+                                    whileTap={{scale: 0.95}}
+                                    className={`${montserrat.className} bg-white text-teal-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-lg`}
+                                >
+                                    Plan My Trip
+                                </motion.button>
+                            </Link>
+                            <Link href="/places" passHref>
+                                <motion.button
+                                    whileHover={{scale: 1.05}}
+                                    whileTap={{scale: 0.95}}
+                                    className={`${montserrat.className} bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300`}
+                                >
+                                    View Destinations
+                                </motion.button>
+                            </Link>
                         </div>
                     </motion.div>
                 </div>
@@ -73,7 +77,7 @@ export default function Footer() {
                 {/* Main Footer Content */}
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {/* Brand Section */}
+                    {/* Brand Section */}
                         <div className="flex flex-col space-y-4">
             <span className={`${whisper.className} text-4xl text-white font-bold`}>
               Road to Heaven
