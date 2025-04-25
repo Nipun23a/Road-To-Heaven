@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Calendar, Users, DollarSign, Plane, Hotel, Clock, MapPin, Heart } from 'lucide-react';
 import Image from 'next/image';
 import {montserrat,whisper} from "@/app/layout";
+import axios from "axios";
 
 // Animation variants
 const fadeInUp = {
@@ -65,11 +66,17 @@ export default function TravelPlannerForm() {
     };
 
     // Handle form submission
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("Form data submitted:", formData);
-        // Here you would typically send the data to your backend or process it
-        alert("Thank you! We'll create your personalized Sri Lanka itinerary shortly.");
+        try{
+            const response = await axios.post('/api/plan-trip',formData);
+            alert('Here your personalized itinerary: \n\n'+response.data.plan);
+        }catch (error){
+            console.error('Error: ',error);
+            alert('Failed to generate the itinerary');
+        }
+        //alert("Thank you! We'll create your personalized Sri Lanka itinerary shortly.");
     };
 
     // Function to go to next step
