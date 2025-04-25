@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Tea Plantation Tour",
+    "image": "/images/tea-experience.jpg",
+    "duration": "4 hours",
+    "availability": "Year-round",
+    "highlight": "Tea tasting included",
+    "description": "Explore the lush tea plantations of Nuwara Eliya and learn about the tea-making process from leaf to cup. Enjoy panoramic views of rolling hills covered in tea bushes.",
+    "color": "from-green-500/20 to-green-600/40"
+  },
+  {
+    "id": 2,
+    "title": "Traditional Cooking Class",
+    "image": "/images/cooking-class.jpg",
+    "duration": "3 hours",
+    "availability": "Daily",
+    "highlight": "Market visit included",
+    "description": "Learn to prepare authentic Sri Lankan curry, rice, and roti dishes with local spices. Visit a local market to select fresh ingredients before your hands-on cooking session.",
+    "color": "from-orange-500/20 to-orange-600/40"
+  },
+  {
+    "id": 3,
+    "title": "Elephant Safari",
+    "image": "/images/elephant-safari.jpg",
+    "duration": "Half day",
+    "availability": "Year-round",
+    "highlight": "Ethical wildlife viewing",
+    "description": "Observe majestic elephants in their natural habitat during a guided jeep safari in Udawalawe National Park, home to hundreds of wild elephants.",
+    "color": "from-gray-500/20 to-gray-600/40"
+  }
+]

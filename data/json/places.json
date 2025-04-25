@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "name": "Unawatuna Beach",
+    "location": "Southern Province",
+    "image": "/images/unawatuna.jpg",
+    "rating": 4.8,
+    "popularity": "High",
+    "description": "Located in the Southern Province of Sri Lanka, Unawatuna Beach is a stunning horseshoe-shaped bay renowned for its golden sands, turquoise waters, and palm-fringed shoreline. Ideal for swimming, snorkeling, and relaxing under the sun, it's a paradise for beach lovers and nature enthusiasts alike. The coral reefs just offshore provide vibrant underwater experiences, while beachfront cafes and restaurants offer delicious seafood and tropical drinks. The nearby Jungle Beach and Japanese Peace Pagoda are popular short hikes, making it a versatile destination for both relaxation and exploration. The best time to visit is from November to April for calm seas and clear skies.",
+    "category": "beaches",
+    "bestTime": "November to April"
+  },
+  {
+    "id": 2,
+    "name": "Mirissa Beach",
+    "location": "Southern Province",
+    "image": "/images/beach.jpg",
+    "rating": 4.7,
+    "popularity": "Medium",
+    "description": "Nestled along the Southern Province coastline, Mirissa Beach is a tranquil crescent-shaped paradise known for its calm ambiance, golden sands, and breathtaking sunsets. It's a hotspot for whale watching, especially blue whales and dolphins, with boat tours departing daily during peak season. Surfers also flock here for the gentle waves ideal for beginners and intermediates. The palm tree hill and Parrot Rock provide iconic photo ops, while beachfront restaurants serve up delicious seafood under the stars. Whether you're here to surf, relax, or spot marine life, the best time to visit is from December to March for sunny skies and smooth seas.",
+    "category": "beaches",
+    "bestTime": "December to March"
+  },
+  {
+    "id": 3,
+    "name": "Arugam Bay",
+    "location": "Eastern Province",
+    "image": "/images/arugam-bay.jpg",
+    "rating": 4.9,
+    "popularity": "High",
+    "description": "Situated in the Eastern Province, Arugam Bay is a world-renowned surf destination, attracting wave riders from across the globe. Its main surf point offers consistently perfect right-hand breaks, ideal for both seasoned surfers and beginners. Beyond surfing, the laid-back beach town vibe, friendly locals, and vibrant café scene create a welcoming atmosphere. Nature lovers can explore nearby lagoons, mangroves, and even wild elephants in the surrounding wilderness. With music-filled beach nights and peaceful sunrise strolls, Arugam Bay blends adventure with serenity. Visit between May and September to catch the best waves and experience the true charm of this surf haven.",
+    "category": "beaches",
+    "bestTime": "May to September"
+  },
+  {
+    "id": 4,
+    "name": "Sigiriya Rock Fortress",
+    "location": "Central Province",
+    "image": "/images/sigiriya.jpg",
+    "rating": 4.9,
+    "popularity": "High",
+    "description": "Rising dramatically from the central plains, Sigiriya Rock Fortress is one of Sri Lanka’s most iconic landmarks. Also known as the Lion Rock, it boasts breathtaking frescoes, symmetrical water gardens, and ancient engineering marvels. This UNESCO World Heritage site dates back to the 5th century and was once the royal citadel of King Kashyapa. The climb to the summit rewards visitors with panoramic views of lush forests and surrounding villages. Its cultural and historical significance makes it a must-visit for heritage lovers. Best visited early in the morning to avoid crowds and heat, Sigiriya offers an unforgettable step back in time.",
+    "category": "heritage",
+    "bestTime": "Year-round (Early morning recommended)"
+  },
+  {
+    "id": 5,
+    "name": "Temple of the Tooth",
+    "location": "Kandy",
+    "image": "/images/temple-tooth.jpg",
+    "rating": 4.8,
+    "popularity": "High",
+    "description": "Located in the sacred city of Kandy, the Temple of the Tooth (Sri Dalada Maligawa) is one of the holiest Buddhist sites in the world. It houses a relic of the Buddha’s tooth, carefully enshrined in a golden casket and revered by pilgrims and tourists alike. The temple's intricate architecture, spiritual atmosphere, and vibrant rituals captivate visitors daily. The temple complex also includes museums and sacred shrines, showcasing the country’s deep-rooted religious heritage. Especially significant during the Esala Perahera festival, the site remains open year-round, offering a peaceful yet powerful glimpse into Sri Lanka’s spiritual and cultural traditions.",
+    "category": "heritage",
+    "bestTime": "Year-round"
+  },
+  {
+    "id": 6,
+    "name": "Anuradhapura",
+    "location": "North Central Province",
+    "image": "/images/anuradhapura.jpg",
+    "rating": 4.7,
+    "popularity": "Medium",
+    "description": "Anuradhapura, the ancient capital of Sri Lanka, is a sprawling UNESCO World Heritage site located in the North Central Province. Known for its massive stupas, sacred Bodhi tree, ancient monasteries, and intricately carved stone structures, it was a thriving center of Theravada Buddhism for centuries. The city is home to some of the oldest continuously inhabited religious sites in the world, such as Ruwanwelisaya and Jetavanaramaya. The tranquil surroundings and historical ruins invite contemplation and exploration. While it can be visited year-round, the ideal time is between May and September when the weather is relatively dry and perfect for sightseeing.",
+    "category": "heritage",
+    "bestTime": "Year-round (May to September ideal)"
+  },
+  {
+    "id": 7,
+    "name": "Yala National Park",
+    "location": "Southern Province",
+    "image": "/images/yala.jpg",
+    "rating": 4.8,
+    "popularity": "High",
+    "description": "Yala National Park, located in the Southern Province, is Sri Lanka’s most famous wildlife sanctuary, celebrated for having one of the highest leopard densities in the world. The park’s diverse ecosystems—ranging from dense jungles to open grasslands and coastal lagoons—host a wide array of animals, including elephants, sloth bears, crocodiles, and hundreds of bird species. Safari jeeps take visitors deep into the wild, offering thrilling close-up encounters with nature. Its dramatic scenery and rich biodiversity make it a must for nature lovers and photographers. Visit between February and July for the best chance to see wildlife in their natural habitat.",
+    "category": "wildlife",
+    "bestTime": "February to July"
+  },
+  {
+    "id": 8,
+    "name": "Udawalawe National Park",
+    "location": "Sabaragamuwa Province",
+    "image": "/images/udawalawe.jpg",
+    "rating": 4.7,
+    "popularity": "Medium",
+    "description": "Located on the boundary of Sabaragamuwa and Uva provinces, Udawalawe National Park is famed for its large elephant population, often seen roaming in herds across open grasslands. The park's landscape of reservoirs, marshes, and forests makes it ideal for birdwatching and spotting animals like water buffaloes, deer, and jackals. Unlike Yala, the terrain here is more open, offering better visibility for wildlife photography. It’s also home to the Udawalawe Elephant Transit Home, where orphaned elephants are rehabilitated. Accessible year-round, Udawalawe promises a serene yet thrilling safari experience, especially appealing for those looking for intimate encounters with Sri Lanka’s majestic elephants.",
+    "category": "wildlife",
+    "bestTime": "Year-round"
+  },
+  {
+    "id": 9,
+    "name": "Minneriya National Park",
+    "location": "North Central Province",
+    "image": "/images/minneriya.jpg",
+    "rating": 4.6,
+    "popularity": "Medium",
+    "description": "Minneriya National Park, nestled in Sri Lanka’s Cultural Triangle, is renowned for “The Gathering,” an extraordinary wildlife spectacle where hundreds of Asian elephants congregate near the Minneriya Tank during the dry season. This phenomenon, occurring between August and September, is considered one of the world’s greatest wildlife experiences. The park also hosts deer, crocodiles, monkeys, and vibrant birdlife in a mix of grasslands, wetlands, and forest. Jeep safaris offer visitors a chance to witness elephants in social herds, often bathing, playing, or feeding together. For those seeking a magical wildlife encounter, Minneriya delivers unforgettable moments in a natural paradise.",
+    "category": "wildlife",
+    "bestTime": "August to September"
+  },
+  {
+    "id": 10,
+    "name": "Ella Rock",
+    "location": "Uva Province",
+    "image": "/images/ella-rock.jpg",
+    "rating": 4.7,
+    "popularity": "Medium",
+    "description": "Perched high in the Uva Province, Ella Rock is a hiker’s paradise offering one of the most rewarding treks in Sri Lanka. The trail, which winds through tea plantations, eucalyptus forests, and misty hills, leads to a summit with sweeping views of the Ella Gap, Little Adam’s Peak, and the surrounding valley. Along the way, local encounters, railway tracks, and wildflowers enrich the journey. The climb can be challenging but is worth every step for sunrise or sunset vistas. Visit between January and March for clear skies and cool temperatures, making the adventure even more enjoyable for trekking enthusiasts.",
+    "category": "adventure",
+    "bestTime": "January to March"
+  },
+  {
+    "id": 11,
+    "name": "Kitulgala",
+    "location": "Western Province",
+    "image": "/images/kithulgala.jpg",
+    "rating": 4.8,
+    "popularity": "Medium",
+    "description": "Kitulgala, nestled in the lush rainforests of the Western Province, is the ultimate destination for thrill-seekers and nature lovers. Known for its white-water rafting along the Kelani River, the town also offers jungle trekking, waterfall abseiling, cave exploration, and birdwatching in its biodiverse surroundings. It’s also the famous filming location of the classic movie The Bridge on the River Kwai. With its emerald-green canopy and refreshing natural pools, Kitulgala is perfect for a weekend escape into nature. The best time to visit is from May to December, avoiding the heavy monsoon, for an adrenaline-packed and scenic adventure.",
+    "category": "adventure",
+    "bestTime": "May to December (except monsoon)"
+  },
+  {
+    "id": 12,
+    "name": "Knuckles Mountain Range",
+    "location": "Central Province",
+    "image": "/images/knuckles.jpg",
+    "rating": 4.9,
+    "popularity": "Low",
+    "description": "The Knuckles Mountain Range, a UNESCO World Heritage site in Central Sri Lanka, is a haven for hikers, eco-tourists, and adventure lovers. Named for its resemblance to a clenched fist, this remote and rugged terrain is rich with biodiversity, cloud forests, cascading waterfalls, and scenic valleys. It’s home to rare flora and fauna and offers trails of varying difficulty, from short treks to multi-day hikes. The area also shelters traditional villages where visitors can experience authentic rural life. Best explored between January and March, the Knuckles Range is ideal for those seeking solitude, serenity, and soul-stirring natural beauty.",
+    "category": "adventure",
+    "bestTime": "January to March"
+  },
+  {
+    "id": 13,
+    "name": "Hikkaduwa Beach",
+    "location": "Southern Province",
+    "image": "/images/beach.jpg",
+    "rating": 4.5,
+    "popularity": "High",
+    "description": "Hikkaduwa Beach, located on the southwest coast, is one of Sri Lanka’s most lively and colorful beach towns. Famous for its coral sanctuary, snorkeling spots, and surfable waves, the beach offers a mix of aquatic adventure and relaxed island vibes. The vibrant nightlife, seafood restaurants, and beachfront bars make it a hotspot for both locals and tourists. You can swim with turtles, explore marine life, or simply bask in the tropical sun. The best time to visit is from November to April when the sea is calm, and the weather is warm—ideal for both thrill-seekers and sun-chasers alike.\n",
+    "category": "beaches",
+    "bestTime": "November to April"
+  },
+  {
+    "id": 14,
+    "name": "Polonnaruwa",
+    "location": "North Central Province",
+    "image": "/images/anuradhapura.jpg",
+    "rating": 4.7,
+    "popularity": "Medium",
+    "description": "Polonnaruwa, once the medieval capital of Sri Lanka, is a treasure trove of ancient ruins, historical temples, and impressive Buddhist statues. This UNESCO World Heritage site features well-preserved architecture from the 11th and 12th centuries, including the famous Gal Vihara rock carvings and the majestic Royal Palace complex. The city’s neatly organized layout, ancient irrigation systems, and scenic surroundings reflect its golden era of urban planning and spirituality. Rent a bicycle and explore the sprawling complex at your own pace. Open year-round, Polonnaruwa offers a peaceful and awe-inspiring experience for history buffs and culture enthusiasts alike.",
+    "category": "heritage",
+    "bestTime": "Year-round"
+  },
+  {
+    "id": 15,
+    "name": "Wilpattu National Park",
+    "location": "North Western Province",
+    "image": "/images/yala.jpg",
+    "rating": 4.6,
+    "popularity": "Low",
+    "description": "Wilpattu National Park, Sri Lanka’s largest and oldest wildlife reserve, is known for its unique \"willus\"—natural sand-rimmed water basins—and its serene, untouched landscapes. Located in the North Western Province, the park is a refuge for elusive leopards, sloth bears, elephants, and abundant birdlife. Unlike other parks, Wilpattu’s charm lies in its quietude and lack of tourist crowds, providing a more intimate safari experience. Jeep safaris traverse through dense forests, open plains, and shimmering lakes, offering excellent chances to spot wildlife in peace. The best time to visit is between February and October when the park is lush and animals are most active.",
+    "category": "wildlife",
+    "bestTime": "February to October"
+  }
+]

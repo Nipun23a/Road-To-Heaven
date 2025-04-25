@@ -7,6 +7,7 @@ import 'swiper/css/navigation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Preloader from "@/components/Preloader";
+import ChatbotButton from "@/components/ChatButton";
 // Adjust path as needed
 
 export  const geistSans = Geist({
@@ -47,6 +48,7 @@ export default function RootLayout({ children }) {
             {children}
         </main>
 
+        <ChatbotButton/>
         <Footer/>
         </body>
         </html>

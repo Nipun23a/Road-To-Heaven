@@ -2,27 +2,29 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ChevronRight, ChevronLeft, MapPin, Star, Users, Info, Search, Filter, Calendar, Clock, Award, ArrowRight,Upload,Send } from 'lucide-react';
+import { ChevronRight, ChevronLeft, MapPin, Star, Users, Info, Search, Filter, Calendar, Clock, Award, ArrowRight } from 'lucide-react';
 import { montserrat, whisper } from "@/app/layout";
+import placesData from '@/data/json/places.json';
+import experiencesData from '@/data/json/experiences.json';
 
 export default function Places(){
-    const [mounted,setMounted] = useState(false)
-    const [activeCategory,setIsCategory] = useState('all');
-    const [currentPage,setCurrentPage] = useState(1);
-    const [searchQuery,setSearchQuery] = useState('');
-    const [filteredPlaces,setFilteredPlaces] = useState([]);
-    const [visibleExperience,setVisibleExperience] = useState(null);
+    const [mounted, setMounted] = useState(false)
+    const [activeCategory, setActiveCategory] = useState('all');
+    const [currentPage, setCurrentPage] = useState(1);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filteredPlaces, setFilteredPlaces] = useState([]);
+    const [visibleExperience, setVisibleExperience] = useState(null);
 
     const placesPerPage = 6;
 
     useEffect(() => {
         setMounted(true);
-        setFilteredPlaces(allPlaces);
+        setFilteredPlaces(placesData);
     }, []);
 
     useEffect(() => {
         // Filter places based on category and search query
-        let result = allPlaces;
+        let result = placesData;
 
         if (activeCategory !== 'all') {
             result = result.filter(place => place.category === activeCategory);
@@ -47,207 +49,6 @@ export default function Places(){
         { id: 'heritage', name: 'Heritage' },
         { id: 'wildlife', name: 'Wildlife' },
         { id: 'adventure', name: 'Adventure' }
-    ];
-
-    const allPlaces = [
-        {
-            id: 1,
-            name: 'Unawatuna Beach',
-            location: 'Southern Province',
-            image: '/images/unawatuna.jpg',
-            rating: 4.8,
-            popularity: 'High',
-            description: 'A picturesque horseshoe-shaped beach with golden sands and crystal-clear waters, perfect for swimming and snorkeling.',
-            category: 'beaches',
-            bestTime: 'November to April'
-        },
-        {
-            id: 2,
-            name: 'Mirissa Beach',
-            location: 'Southern Province',
-            image: '/images/beach.jpg',
-            rating: 4.7,
-            popularity: 'Medium',
-            description: 'Famous for whale watching and surfing, this crescent-shaped beach offers stunning sunsets and a relaxed atmosphere.',
-            category: 'beaches',
-            bestTime: 'December to March'
-        },
-        {
-            id: 3,
-            name: 'Arugam Bay',
-            location: 'Eastern Province',
-            image: '/images/arugam-bay.jpg',
-            rating: 4.9,
-            popularity: 'High',
-            description: 'One of the top surfing destinations in the world with perfect point breaks and laid-back beach vibes.',
-            category: 'beaches',
-            bestTime: 'May to September'
-        },
-        {
-            id: 4,
-            name: 'Sigiriya Rock Fortress',
-            location: 'Central Province',
-            image: '/images/sigiriya.jpg',
-            rating: 4.9,
-            popularity: 'High',
-            description: 'Ancient rock fortress with stunning frescoes and panoramic views, often called the Eighth Wonder of the World.',
-            category: 'heritage',
-            bestTime: 'Year-round (Early morning recommended)'
-        },
-        {
-            id: 5,
-            name: 'Temple of the Tooth',
-            location: 'Kandy',
-            image: '/images/temple-tooth.jpg',
-            rating: 4.8,
-            popularity: 'High',
-            description: 'Sacred Buddhist temple housing the relic of the tooth of Buddha, a UNESCO World Heritage site.',
-            category: 'heritage',
-            bestTime: 'Year-round'
-        },
-        {
-            id: 6,
-            name: 'Anuradhapura',
-            location: 'North Central Province',
-            image: '/images/anuradhapura.jpg',
-            rating: 4.7,
-            popularity: 'Medium',
-            description: 'Ancient city with well-preserved ruins of an ancient Sinhalese civilization, including dagobas and temples.',
-            category: 'heritage',
-            bestTime: 'Year-round (May to September ideal)'
-        },
-        {
-            id: 7,
-            name: 'Yala National Park',
-            location: 'Southern Province',
-            image: '/images/yala.jpg',
-            rating: 4.8,
-            popularity: 'High',
-            description: 'Famous for having the highest leopard density in the world, with diverse ecosystems and abundant wildlife.',
-            category: 'wildlife',
-            bestTime: 'February to July'
-        },
-        {
-            id: 8,
-            name: 'Udawalawe National Park',
-            location: 'Sabaragamuwa Province',
-            image: '/images/udawalawe.jpg',
-            rating: 4.7,
-            popularity: 'Medium',
-            description: 'Known for large elephant herds and bird watching, with open terrain making wildlife spotting easier.',
-            category: 'wildlife',
-            bestTime: 'Year-round'
-        },
-        {
-            id: 9,
-            name: 'Minneriya National Park',
-            location: 'North Central Province',
-            image: '/images/minneriya.jpg',
-            rating: 4.6,
-            popularity: 'Medium',
-            description: 'Famous for "The Gathering," where hundreds of elephants congregate around the Minneriya Tank.',
-            category: 'wildlife',
-            bestTime: 'August to September'
-        },
-        {
-            id: 10,
-            name: 'Ella Rock',
-            location: 'Uva Province',
-            image: '/images/ella-rock.jpg',
-            rating: 4.7,
-            popularity: 'Medium',
-            description: 'Challenging hike offering breathtaking views of the surrounding mountains and tea plantations.',
-            category: 'adventure',
-            bestTime: 'January to March'
-        },
-        {
-            id: 11,
-            name: 'Kitulgala',
-            location: 'Western Province',
-            image: '/images/kithulgala.jpg',
-            rating: 4.8,
-            popularity: 'Medium',
-            description: 'Premier white-water rafting location with rainforest canopy adventures and natural swimming pools.',
-            category: 'adventure',
-            bestTime: 'May to December (except monsoon)'
-        },
-        {
-            id: 12,
-            name: 'Knuckles Mountain Range',
-            location: 'Central Province',
-            image: '/images/knuckles.jpg',
-            rating: 4.9,
-            popularity: 'Low',
-            description: 'UNESCO World Heritage site with diverse landscapes, perfect for trekking and experiencing cloud forests.',
-            category: 'adventure',
-            bestTime: 'January to March'
-        },
-        {
-            id: 13,
-            name: 'Hikkaduwa Beach',
-            location: 'Southern Province',
-            image: '/images/beach.jpg',
-            rating: 4.5,
-            popularity: 'High',
-            description: 'Popular beach known for coral reefs, surfing, and vibrant nightlife with numerous beach restaurants and bars.',
-            category: 'beaches',
-            bestTime: 'November to April'
-        },
-        {
-            id: 14,
-            name: 'Polonnaruwa',
-            location: 'North Central Province',
-            image: '/images/anuradhapura.jpg',
-            rating: 4.7,
-            popularity: 'Medium',
-            description: 'Medieval capital with well-preserved ancient structures, impressive stupas, and statues of Buddha.',
-            category: 'heritage',
-            bestTime: 'Year-round'
-        },
-        {
-            id: 15,
-            name: 'Wilpattu National Park',
-            location: 'North Western Province',
-            image: '/images/yala.jpg',
-            rating: 4.6,
-            popularity: 'Low',
-            description: 'Sri Lanka\'s largest national park, famous for leopards, sloth bears, and its unique complex of lakes.',
-            category: 'wildlife',
-            bestTime: 'February to October'
-        }
-    ];
-
-    const experiences = [
-        {
-            id: 1,
-            title: 'Tea Plantation Tour',
-            image: '/images/tea-experience.jpg',
-            duration: '4 hours',
-            availability: 'Year-round',
-            highlight: 'Tea tasting included',
-            description: 'Explore the lush tea plantations of Nuwara Eliya and learn about the tea-making process from leaf to cup. Enjoy panoramic views of rolling hills covered in tea bushes.',
-            color: 'from-green-500/20 to-green-600/40'
-        },
-        {
-            id: 2,
-            title: 'Traditional Cooking Class',
-            image: '/images/cooking-class.jpg',
-            duration: '3 hours',
-            availability: 'Daily',
-            highlight: 'Market visit included',
-            description: 'Learn to prepare authentic Sri Lankan curry, rice, and roti dishes with local spices. Visit a local market to select fresh ingredients before your hands-on cooking session.',
-            color: 'from-orange-500/20 to-orange-600/40'
-        },
-        {
-            id: 3,
-            title: 'Elephant Safari',
-            image: '/images/elephant-safari.jpg',
-            duration: 'Half day',
-            availability: 'Year-round',
-            highlight: 'Ethical wildlife viewing',
-            description: 'Observe majestic elephants in their natural habitat during a guided jeep safari in Udawalawe National Park, home to hundreds of wild elephants.',
-            color: 'from-gray-500/20 to-gray-600/40'
-        }
     ];
 
     // Calculate pagination data
@@ -444,7 +245,7 @@ export default function Places(){
                                                 </div>
                                             </div>
                                             <p className={`${montserrat.className} text-gray-600 mb-6 h-20 overflow-hidden`}>
-                                                {place.description}
+                                                {place.description.split(' ').slice(0, 10).join(' ')}...
                                             </p>
                                             <div className="flex justify-between items-center">
                                                 <div className="flex items-center">
@@ -565,7 +366,7 @@ export default function Places(){
                         viewport={{ once: true, amount: 0.2 }}
                         className="grid grid-cols-1 md:grid-cols-3 gap-8"
                     >
-                        {experiences.map((experience) => (
+                        {experiencesData.map((experience) => (
                             <motion.div
                                 key={experience.id}
                                 variants={itemVariants}
@@ -633,156 +434,6 @@ export default function Places(){
                     </div>
                 </div>
             </section>
-
-            {/* Add a Place Form */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4 md:px-8">
-                    <div className="max-w-4xl mx-auto">
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7 }}
-                            viewport={{ once: true }}
-                            className="text-center mb-12"
-                        >
-                            <h3 className={`${whisper.className} text-teal-600 text-4xl mb-2`}>Share Your Discovery</h3>
-                            <h2 className={`${montserrat.className} text-3xl md:text-4xl font-bold text-gray-800 mb-4`}>
-                                Suggest a Place
-                            </h2>
-                            <div className="h-1 w-24 bg-teal-500 mx-auto mb-6"></div>
-                            <p className={`${montserrat.className} text-gray-600 max-w-2xl mx-auto`}>
-                                Know a hidden gem in Sri Lanka that others should experience? Share it with our community.
-                            </p>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7, delay: 0.2 }}
-                            viewport={{ once: true }}
-                            className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
-                        >
-                            <form className="space-y-6">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label htmlFor="placeName" className={`${montserrat.className} block text-sm font-medium text-gray-700 mb-1`}>
-                                            Place Name*
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="placeName"
-                                            className={`${montserrat.className} w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
-                                            placeholder="Enter place name"
-                                            required
-                                        />
-                                    </div>
-
-                                    <div>
-                                        <label htmlFor="location" className={`${montserrat.className} block text-sm font-medium text-gray-700 mb-1`}>
-                                            Location*
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="location"
-                                            className={`${montserrat.className} w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
-                                            placeholder="City or region"
-                                            required
-                                        />
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label htmlFor="description" className={`${montserrat.className} block text-sm font-medium text-gray-700 mb-1`}>
-                                        Description*
-                                    </label>
-                                    <textarea
-                                        id="description"
-                                        rows={4}
-                                        className={`${montserrat.className} w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
-                                        placeholder="Tell us about this place"
-                                        required
-                                    ></textarea>
-                                </div>
-
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label htmlFor="category" className={`${montserrat.className} block text-sm font-medium text-gray-700 mb-1`}>
-                                            Category*
-                                        </label>
-                                        <select
-                                            id="category"
-                                            className={`${montserrat.className} w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
-                                            required
-                                        >
-                                            <option value="">Select category</option>
-                                            <option value="beach">Beach</option>
-                                            <option value="mountain">Mountain</option>
-                                            <option value="cultural">Cultural Site</option>
-                                            <option value="wildlife">Wildlife</option>
-                                            <option value="waterfall">Waterfall</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-
-                                    <div>
-                                        <label htmlFor="bestTime" className={`${montserrat.className} block text-sm font-medium text-gray-700 mb-1`}>
-                                            Best Time to Visit
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="bestTime"
-                                            className={`${montserrat.className} w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent`}
-                                            placeholder="E.g. December-March"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label htmlFor="images" className={`${montserrat.className} block text-sm font-medium text-gray-700 mb-1`}>
-                                        Upload Images
-                                    </label>
-                                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
-                                        <input
-                                            type="file"
-                                            id="images"
-                                            multiple
-                                            className="hidden"
-                                        />
-                                        <label
-                                            htmlFor="images"
-                                            className="cursor-pointer flex flex-col items-center"
-                                        >
-                                            <Upload className="h-10 w-10 text-gray-400 mb-2" />
-                                            <span className={`${montserrat.className} text-gray-600 mb-1`}>
-                                                Drag and drop images or click to browse
-                                            </span>
-                                            <span className={`${montserrat.className} text-gray-400 text-sm`}>
-                                                Maximum 5 images (JPG, PNG)
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-col items-center">
-                                    <button
-                                        type="submit"
-                                        className={`${montserrat.className} bg-teal-500 hover:bg-teal-600 text-white py-3 px-8 rounded-lg text-lg font-medium transition-all duration-300 flex items-center`}
-                                    >
-                                        Submit Place
-                                        <Send size={18} className="ml-2" />
-                                    </button>
-                                    <p className={`${montserrat.className} text-gray-500 text-sm mt-4`}>
-                                        * Required fields
-                                    </p>
-                                </div>
-                            </form>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
         </>
-
-
-
     );
 }

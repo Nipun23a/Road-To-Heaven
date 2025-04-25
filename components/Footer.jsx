@@ -105,16 +105,21 @@ export default function Footer() {
                         {/* Quick Links */}
                         <div className="flex flex-col space-y-3">
                             <h3 className={`${montserrat.className} text-lg font-semibold mb-2`}>Quick Links</h3>
-                            {['Home', 'About Us', 'Places', 'Hotels and Flights', 'Contact Us'].map((item) => (
-                                <a
-                                    key={item}
-                                    href={`#${item.toLowerCase().replace(/ /g, '-')}`}
-                                    className={`${montserrat.className} text-sm text-teal-100 hover:text-white transition-colors duration-200`}
-                                >
-                                    {item}
-                                </a>
-                            ))}
+                            {['Home', 'About Us', 'Places', 'Hotels and Flights', 'Contact Us'].map((item) => {
+                                const route =
+                                    item === 'Home' ? '/' : `/${item.toLowerCase().replace(/ /g, '-')}`;
+                                return (
+                                    <a
+                                        key={item}
+                                        href={route}
+                                        className={`${montserrat.className} text-sm text-teal-100 hover:text-white transition-colors duration-200`}
+                                    >
+                                        {item}
+                                    </a>
+                                );
+                            })}
                         </div>
+
 
                         {/* Contact Info */}
                         <div className="flex flex-col space-y-3">
@@ -127,15 +132,15 @@ export default function Footer() {
                             <div className="flex items-center space-x-2">
                                 <Phone size={16} className="text-teal-200"/>
                                 <a href="tel:+1234567890"
-                                   className={`${montserrat.className} text-sm text-teal-100 hover:text-white transition-colors`}>+1
-                                    (234) 567-890</a>
+                                   className={`${montserrat.className} text-sm text-teal-100 hover:text-white transition-colors`}>+9
+                                    (71) 383-7591</a>
                             </div>
                             <div className="flex items-start space-x-2">
                                 <Map size={16} className="text-teal-200 mt-1 flex-shrink-0"/>
                                 <span className={`${montserrat.className} text-sm text-teal-100`}>
-                123 Travel Street, Paradise City,<br/>
-                Wonderland, 54321
-              </span>
+                                    Pitipana - Thalagala Rd, Homagama,<br/>
+                                                        Sri Lanka
+                                </span>
                             </div>
                         </div>
 
