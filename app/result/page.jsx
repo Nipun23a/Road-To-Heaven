@@ -3,13 +3,14 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import {
     MapPin, Calendar, DollarSign, Users, Heart, Clock,
     Plane, ChevronDown, ChevronUp, Navigation,
     Coffee, Utensils, MapPinned
 } from 'lucide-react';
 import { GoogleMap, useJsApiLoader, Marker, InfoWindow } from '@react-google-maps/api';
-import {montserrat, whisper} from "@/app/layout";
+import { montserrat, whisper } from "@/app/layout";
 
 // Animation variants
 const fadeInUp = {
@@ -32,6 +33,7 @@ export default function ItineraryResults() {
     const [selectedMarker, setSelectedMarker] = useState(null);
     const [expandedDay, setExpandedDay] = useState(1);
     const [mapCenter, setMapCenter] = useState({ lat: 7.8731, lng: 80.7718 }); // Sri Lanka center coordinates
+    const router = useRouter();
 
     // Google Maps integration
     const { isLoaded } = useJsApiLoader({
@@ -40,205 +42,57 @@ export default function ItineraryResults() {
     });
 
     useEffect(() => {
-        // In a real application, this would retrieve data from your backend
-        // For now, we'll simulate receiving data from the previous page
         const fetchItineraryData = async () => {
             try {
-                // This would be a real API call in your application
-                // const response = await fetch('/api/itinerary/latest');
-                // const data = await response.json();
+                // Retrieve the stored plan from localStorage
+                const planData = localStorage.getItem('tripPlan');
 
-                // For demo purposes, using mock data that matches the Gemini API response format
-                const mockData = {
-                    tripDetails: {
-                        tripType: "family",
-                        budget: "3000",
-                        budgetType: "standard",
-                        arrivalDate: "2025-05-15",
-                        departureDate: "2025-05-22",
-                        nights: "7",
-                        originCountry: "United Kingdom",
-                        includeFlights: true,
-                        includeHotels: true,
-                        activities: ["beaches", "wildlife", "culture"]
-                    },
-                    itinerary: [
-                        {
-                            day: 1,
-                            date: "2025-05-15",
-                            locations: [
-                                {
-                                    name: "Negombo",
-                                    description: "Coastal town with beautiful beaches and colonial charm, perfect for your first day in Sri Lanka.",
-                                    coordinates: {
-                                        latitude: 7.2086,
-                                        longitude: 79.8495
-                                    },
-                                    activities: ["Beach relaxation", "Visit the fish market", "Explore Dutch Canal"]
-                                }
-                            ],
-                            accommodation: {
-                                name: "Jetwing Blue",
-                                location: "Negombo",
-                                priceRange: "$$"
-                            },
-                            meals: ["Seafood dinner at Lords Restaurant"]
-                        },
-                        {
-                            day: 2,
-                            date: "2025-05-16",
-                            locations: [
-                                {
-                                    name: "Sigiriya",
-                                    description: "Ancient rock fortress with spectacular views and fascinating history.",
-                                    coordinates: {
-                                        latitude: 7.9572,
-                                        longitude: 80.7603
-                                    },
-                                    activities: ["Climb Sigiriya Rock", "Visit Sigiriya Museum"]
-                                }
-                            ],
-                            accommodation: {
-                                name: "Aliya Resort & Spa",
-                                location: "Sigiriya",
-                                priceRange: "$$"
-                            },
-                            meals: ["Traditional Sri Lankan rice and curry at the resort"]
-                        },
-                        {
-                            day: 3,
-                            date: "2025-05-17",
-                            locations: [
-                                {
-                                    name: "Kandy",
-                                    description: "Cultural capital of Sri Lanka with the famous Temple of the Tooth Relic.",
-                                    coordinates: {
-                                        latitude: 7.2906,
-                                        longitude: 80.6337
-                                    },
-                                    activities: ["Visit Temple of the Sacred Tooth Relic", "Royal Botanical Gardens", "Kandy Lake walk"]
-                                }
-                            ],
-                            accommodation: {
-                                name: "OZO Kandy",
-                                location: "Kandy",
-                                priceRange: "$$"
-                            },
-                            meals: ["Dinner at The Empire Cafe"]
-                        },
-                        {
-                            day: 4,
-                            date: "2025-05-18",
-                            locations: [
-                                {
-                                    name: "Nuwara Eliya",
-                                    description: "Picturesque hill station known for its tea plantations and cool climate.",
-                                    coordinates: {
-                                        latitude: 6.9497,
-                                        longitude: 80.7891
-                                    },
-                                    activities: ["Visit tea plantations", "Gregory Lake", "Victoria Park"]
-                                }
-                            ],
-                            accommodation: {
-                                name: "Grand Hotel",
-                                location: "Nuwara Eliya",
-                                priceRange: "$$"
-                            },
-                            meals: ["High tea at the Grand Hotel"]
-                        },
-                        {
-                            day: 5,
-                            date: "2025-05-19",
-                            locations: [
-                                {
-                                    name: "Yala National Park",
-                                    description: "Famous wildlife sanctuary with the highest leopard density in the world.",
-                                    coordinates: {
-                                        latitude: 6.3698,
-                                        longitude: 81.5167
-                                    },
-                                    activities: ["Morning safari", "Evening safari", "Bird watching"]
-                                }
-                            ],
-                            accommodation: {
-                                name: "Cinnamon Wild",
-                                location: "Yala",
-                                priceRange: "$$$"
-                            },
-                            meals: ["Buffet dinner at the lodge"]
-                        },
-                        {
-                            day: 6,
-                            date: "2025-05-20",
-                            locations: [
-                                {
-                                    name: "Mirissa",
-                                    description: "Beautiful beach town known for whale watching and surfing.",
-                                    coordinates: {
-                                        latitude: 5.9483,
-                                        longitude: 80.4589
-                                    },
-                                    activities: ["Whale watching", "Beach relaxation", "Coconut Tree Hill"]
-                                }
-                            ],
-                            accommodation: {
-                                name: "Paradise Beach Club",
-                                location: "Mirissa",
-                                priceRange: "$$"
-                            },
-                            meals: ["Seafood barbecue on the beach"]
-                        },
-                        {
-                            day: 7,
-                            date: "2025-05-21",
-                            locations: [
-                                {
-                                    name: "Galle",
-                                    description: "Historic fort city with Dutch colonial architecture and charming streets.",
-                                    coordinates: {
-                                        latitude: 6.0535,
-                                        longitude: 80.2210
-                                    },
-                                    activities: ["Explore Galle Fort", "Visit Maritime Museum", "Shopping for souvenirs"]
-                                }
-                            ],
-                            accommodation: {
-                                name: "Amangalla",
-                                location: "Galle",
-                                priceRange: "$$$"
-                            },
-                            meals: ["Dinner at Church Street Social"]
+                if (!planData) {
+                    console.error("No itinerary data found in localStorage");
+                    setLoading(false);
+                    return;
+                }
+
+                // Parse the JSON string from localStorage
+                const parsedPlanData = JSON.parse(planData);
+
+                // Check if we received the plan property from the API response
+                let formattedData;
+
+                if (typeof parsedPlanData.plan === 'string') {
+                    // The plan is a JSON string, parse it
+                    try {
+                        // Extract JSON from the text response (in case there's extra text)
+                        const jsonMatch = parsedPlanData.plan.match(/\{[\s\S]*\}/);
+                        if (jsonMatch) {
+                            const jsonString = jsonMatch[0];
+                            const parsedPlan = JSON.parse(jsonString);
+
+                            // Combine with the original form data
+                            formattedData = {
+                                tripDetails: parsedPlanData.formData || {},
+                                ...parsedPlan
+                            };
+                        } else {
+                            throw new Error("Could not extract JSON from response");
                         }
-                    ],
-                    transportation: {
-                        flights: {
-                            arrival: {
-                                from: "London Heathrow",
-                                to: "Bandaranaike International Airport",
-                                estimatedCost: "$800 per person"
-                            },
-                            departure: {
-                                from: "Bandaranaike International Airport",
-                                to: "London Heathrow",
-                                estimatedCost: "$800 per person"
-                            }
-                        },
-                        localTransport: ["Private car with driver - $60-80 per day", "Train from Kandy to Nuwara Eliya - $10 per person"]
-                    },
-                    totalDistanceCovered: "870 km",
-                    budgetBreakdown: {
-                        accommodation: "$1,200",
-                        transportation: "$1,000",
-                        food: "$400",
-                        activities: "$300",
-                        miscellaneous: "$100",
-                        total: "$3,000"
+                    } catch (parseError) {
+                        console.error("Error parsing plan JSON:", parseError);
+                        setLoading(false);
+                        return;
                     }
-                };
+                } else if (typeof parsedPlanData === 'object') {
+                    // The plan is already an object
+                    formattedData = parsedPlanData;
+                } else {
+                    console.error("Unexpected plan data format");
+                    setLoading(false);
+                    return;
+                }
 
-                setItineraryData(mockData);
+                setItineraryData(formattedData);
                 setLoading(false);
+
             } catch (error) {
                 console.error("Error fetching itinerary data:", error);
                 setLoading(false);
@@ -271,6 +125,10 @@ export default function ItineraryResults() {
         });
     };
 
+    const handleReturnToPlanning = () => {
+        router.push('/plan');
+    };
+
     if (loading) {
         return (
             <div className="flex items-center justify-center h-screen">
@@ -285,7 +143,7 @@ export default function ItineraryResults() {
                 <h1 className="text-3xl font-bold text-red-500 mb-4">Error Loading Itinerary</h1>
                 <p>Unable to load your travel plan. Please try again.</p>
                 <button
-                    onClick={() => window.location.href = '/plan'}
+                    onClick={handleReturnToPlanning}
                     className="mt-6 bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-full transition-all duration-300"
                 >
                     Back to Planning
@@ -399,8 +257,8 @@ export default function ItineraryResults() {
                                 <div>
                                     <h3 className="font-bold text-lg mb-3">Your Preferences</h3>
                                     <div className="flex flex-wrap gap-2">
-                                        {itineraryData.tripDetails.activities.map(activity => (
-                                            <span key={activity} className="bg-teal-50 text-teal-700 px-3 py-1 rounded-full border border-teal-200 capitalize">
+                                        {itineraryData.tripDetails.activities.map((activity, index) => (
+                                            <span key={index} className="bg-teal-50 text-teal-700 px-3 py-1 rounded-full border border-teal-200 capitalize">
                                                 {activity}
                                             </span>
                                         ))}

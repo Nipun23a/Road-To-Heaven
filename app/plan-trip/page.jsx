@@ -1,10 +1,11 @@
 'use client'
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Users, DollarSign, Plane, Hotel, Clock, MapPin, Heart } from 'lucide-react';
 import Image from 'next/image';
 import {montserrat,whisper} from "@/app/layout";
 import axios from "axios";
+import { useRouter } from "next/navigation"; // Updated import for Next.js 13+
 
 // Animation variants
 const fadeInUp = {
@@ -22,6 +23,9 @@ const staggerContainer = {
 };
 
 export default function TravelPlannerForm() {
+    // Properly use the router hook at the top level of the component
+    const router = useRouter();
+
     // Form state
     const [formData, setFormData] = useState({
         tripType: 'solo',
@@ -69,14 +73,24 @@ export default function TravelPlannerForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("Form data submitted:", formData);
-        try{
-            const response = await axios.post('/api/plan-trip',formData);
-            alert('Here your personalized itinerary: \n\n'+response.data.plan);
-        }catch (error){
-            console.error('Error: ',error);
+
+        try {
+            const response = await axios.post('/api/plan-trip', formData);
+            alert("Thank you! We'll create your personalized Sri Lanka itinerary shortly.");
+
+            const planData = {
+                plan: response.data.plan,
+                formData: formData
+            };
+
+            localStorage.setItem('tripPlan', JSON.stringify(planData));
+
+            // Correctly navigate using the router
+            router.push('/result');
+        } catch (error) {
+            console.error('Error: ', error);
             alert('Failed to generate the itinerary');
         }
-        //alert("Thank you! We'll create your personalized Sri Lanka itinerary shortly.");
     };
 
     // Function to go to next step
