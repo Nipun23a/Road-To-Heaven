@@ -1,17 +1,34 @@
 'use client'
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ChevronRight, MapPin, Star, Users, Info } from 'lucide-react';
+import { ChevronRight, MapPin, Star, Users } from 'lucide-react';
 import { montserrat, whisper } from "@/app/layout";
+import destinationsData from '../data/json/places.json';
+
 
 export default function DestinationsShowcase() {
     const [activeTab, setActiveTab] = useState('beaches');
     const [mounted, setMounted] = useState(false);
+    const [filteredDestinations, setFilteredDestinations] = useState([]);
 
     useEffect(() => {
         setMounted(true);
+
+        // Initial filtering of destinations
+        filterDestinations(activeTab);
     }, []);
+
+    useEffect(() => {
+        // Filter destinations whenever the active tab changes
+        filterDestinations(activeTab);
+    }, [activeTab]);
+
+    const filterDestinations = (category) => {
+        const filtered = destinationsData.filter(item => item.category === category);
+        setFilteredDestinations(filtered.slice(0, 3)); // Show only first 3 destinations per category
+    };
 
     const categories = [
         { id: 'beaches', name: 'Beaches' },
@@ -19,125 +36,6 @@ export default function DestinationsShowcase() {
         { id: 'wildlife', name: 'Wildlife' },
         { id: 'adventure', name: 'Adventure' }
     ];
-
-    const destinations = {
-        beaches: [
-            {
-                id: 1,
-                name: 'Unawatuna Beach',
-                location: 'Southern Province',
-                image: '/images/unawatuna.jpg',
-                rating: 4.8,
-                popularity: 'High',
-                description: 'A picturesque horseshoe-shaped beach with golden sands and crystal-clear waters, perfect for swimming and snorkeling.'
-            },
-            {
-                id: 2,
-                name: 'Mirissa Beach',
-                location: 'Southern Province',
-                image: '/images/beach.jpg',
-                rating: 4.7,
-                popularity: 'Medium',
-                description: 'Famous for whale watching and surfing, this crescent-shaped beach offers stunning sunsets and a relaxed atmosphere.'
-            },
-            {
-                id: 3,
-                name: 'Arugam Bay',
-                location: 'Eastern Province',
-                image: '/images/arugam-bay.jpg',
-                rating: 4.9,
-                popularity: 'High',
-                description: 'One of the top surfing destinations in the world with perfect point breaks and laid-back beach vibes.'
-            }
-        ],
-        heritage: [
-            {
-                id: 1,
-                name: 'Sigiriya Rock Fortress',
-                location: 'Central Province',
-                image: '/images/sigiriya.jpg',
-                rating: 4.9,
-                popularity: 'High',
-                description: 'Ancient rock fortress with stunning frescoes and panoramic views, often called the Eighth Wonder of the World.'
-            },
-            {
-                id: 2,
-                name: 'Temple of the Tooth',
-                location: 'Kandy',
-                image: '/images/temple-tooth.jpg',
-                rating: 4.8,
-                popularity: 'High',
-                description: 'Sacred Buddhist temple housing the relic of the tooth of Buddha, a UNESCO World Heritage site.'
-            },
-            {
-                id: 3,
-                name: 'Anuradhapura',
-                location: 'North Central Province',
-                image: '/images/anuradhapura.jpg',
-                rating: 4.7,
-                popularity: 'Medium',
-                description: 'Ancient city with well-preserved ruins of an ancient Sinhalese civilization, including dagobas and temples.'
-            }
-        ],
-        wildlife: [
-            {
-                id: 1,
-                name: 'Yala National Park',
-                location: 'Southern Province',
-                image: '/images/yala.jpg',
-                rating: 4.8,
-                popularity: 'High',
-                description: 'Famous for having the highest leopard density in the world, with diverse ecosystems and abundant wildlife.'
-            },
-            {
-                id: 2,
-                name: 'Udawalawe National Park',
-                location: 'Sabaragamuwa Province',
-                image: '/images/udawalawe.jpg',
-                rating: 4.7,
-                popularity: 'Medium',
-                description: 'Known for large elephant herds and bird watching, with open terrain making wildlife spotting easier.'
-            },
-            {
-                id: 3,
-                name: 'Minneriya National Park',
-                location: 'North Central Province',
-                image: '/images/minneriya.jpg',
-                rating: 4.6,
-                popularity: 'Medium',
-                description: 'Famous for "The Gathering," where hundreds of elephants congregate around the Minneriya Tank.'
-            }
-        ],
-        adventure: [
-            {
-                id: 1,
-                name: 'Ella Rock',
-                location: 'Uva Province',
-                image: '/images/ella-rock.jpg',
-                rating: 4.7,
-                popularity: 'Medium',
-                description: 'Challenging hike offering breathtaking views of the surrounding mountains and tea plantations.'
-            },
-            {
-                id: 2,
-                name: 'Kitulgala',
-                location: 'Western Province',
-                image: '/images/kithulgala.jpg',
-                rating: 4.8,
-                popularity: 'Medium',
-                description: 'Premier white-water rafting location with rainforest canopy adventures and natural swimming pools.'
-            },
-            {
-                id: 3,
-                name: 'Knuckles Mountain Range',
-                location: 'Central Province',
-                image: '/images/knuckles.jpg',
-                rating: 4.9,
-                popularity: 'Low',
-                description: 'UNESCO World Heritage site with diverse landscapes, perfect for trekking and experiencing cloud forests.'
-            }
-        ]
-    };
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -245,7 +143,7 @@ export default function DestinationsShowcase() {
                     animate="visible"
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
-                    {destinations[activeTab].map((destination) => (
+                    {filteredDestinations.map((destination) => (
                         <motion.div
                             key={destination.id}
                             variants={itemVariants}
@@ -280,10 +178,13 @@ export default function DestinationsShowcase() {
                                 <p className={`${montserrat.className} text-gray-600 mb-4 line-clamp-3`}>
                                     {destination.description}
                                 </p>
-                                <button className={`${montserrat.className} flex items-center text-teal-600 font-medium hover:text-teal-800 transition-colors`}>
+                                <Link
+                                    href={`/places/${destination.id}`}
+                                    className={`${montserrat.className} flex items-center text-teal-600 font-medium hover:text-teal-800 transition-colors`}
+                                >
                                     Explore Destination
                                     <ChevronRight size={18} className="ml-1 transition-transform group-hover:translate-x-1" />
-                                </button>
+                                </Link>
                             </div>
                         </motion.div>
                     ))}
@@ -297,10 +198,13 @@ export default function DestinationsShowcase() {
                     viewport={{ once: true }}
                     className="text-center mt-12"
                 >
-                    <button className={`${montserrat.className} bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:shadow-lg transform hover:scale-105 flex items-center mx-auto`}>
+                    <Link
+                        href="/places"
+                        className={`${montserrat.className} bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:shadow-lg transform hover:scale-105 flex items-center mx-auto inline-flex`}
+                    >
                         View All Destinations
                         <ChevronRight size={20} className="ml-1" />
-                    </button>
+                    </Link>
                 </motion.div>
             </div>
         </section>
