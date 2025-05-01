@@ -6,8 +6,17 @@
     "duration": "4 hours",
     "availability": "Year-round",
     "highlight": "Tea tasting included",
-    "description": "Explore the lush tea plantations of Nuwara Eliya and learn about the tea-making process from leaf to cup. Enjoy panoramic views of rolling hills covered in tea bushes.",
-    "color": "from-green-500/20 to-green-600/40"
+    "description": "Explore the lush tea plantations of Nuwara Eliya...",
+    "color": "from-green-500/20 to-green-600/40",
+    "price": 25,
+    "latitude": 6.9744,
+    "longitude": 80.7829,
+    "experience": "Walking through the misty hills with the aroma of fresh tea leaves was absolutely magical!",
+    "instructor": {
+      "name": "Nimal Perera",
+      "contact": "+94 77 123 4567",
+      "email": "nimal.perera@experiences.lk"
+    }
   },
   {
     "id": 2,
@@ -16,8 +25,17 @@
     "duration": "3 hours",
     "availability": "Daily",
     "highlight": "Market visit included",
-    "description": "Learn to prepare authentic Sri Lankan curry, rice, and roti dishes with local spices. Visit a local market to select fresh ingredients before your hands-on cooking session.",
-    "color": "from-orange-500/20 to-orange-600/40"
+    "description": "Learn to prepare authentic Sri Lankan curry...",
+    "color": "from-orange-500/20 to-orange-600/40",
+    "price": 30,
+    "latitude": 6.9271,
+    "longitude": 79.8612,
+    "experience": "I never thought I could cook such flavorful curry—Lakshmi made it feel easy and fun!",
+    "instructor": {
+      "name": "Lakshmi Fernando",
+      "contact": "+94 76 234 5678",
+      "email": "lakshmi.fernando@experiences.lk"
+    }
   },
   {
     "id": 3,
@@ -26,7 +44,73 @@
     "duration": "Half day",
     "availability": "Year-round",
     "highlight": "Ethical wildlife viewing",
-    "description": "Observe majestic elephants in their natural habitat during a guided jeep safari in Udawalawe National Park, home to hundreds of wild elephants.",
-    "color": "from-gray-500/20 to-gray-600/40"
+    "description": "Observe majestic elephants in their natural habitat...",
+    "color": "from-gray-500/20 to-gray-600/40",
+    "price": 55,
+    "latitude": 6.4753,
+    "longitude": 80.8880,
+    "experience": "Seeing elephants roam freely in the wild was a once-in-a-lifetime moment I’ll never forget.",
+    "instructor": {
+      "name": "Rohan Dissanayake",
+      "contact": "+94 71 345 6789",
+      "email": "rohan.dissanayake@experiences.lk"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Ancient City Cycling Tour",
+    "image": "/images/cycling-tour.jpg",
+    "duration": "5 hours",
+    "availability": "Except monsoon season",
+    "highlight": "Professional guides",
+    "description": "Cycle through the ancient city of Polonnaruwa...",
+    "color": "from-blue-500/20 to-blue-600/40",
+    "price": 40,
+    "latitude": 7.9403,
+    "longitude": 81.0188,
+    "experience": "Cycling past centuries-old ruins and hearing their stories made history come alive.",
+    "instructor": {
+      "name": "Chaminda Jayawardena",
+      "contact": "+94 75 456 7890",
+      "email": "chaminda.jayawardena@experiences.lk"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Sunrise Adam's Peak Hike",
+    "image": "/images/adams-peak.jpg",
+    "duration": "6-7 hours",
+    "availability": "December to May",
+    "highlight": "Spiritual experience",
+    "description": "Climb the sacred Adam's Peak by night...",
+    "color": "from-purple-500/20 to-purple-600/40",
+    "price": 35,
+    "latitude": 6.8096,
+    "longitude": 80.4999,
+    "experience": "Reaching the summit in darkness and watching the sun rise over the clouds was deeply moving.",
+    "instructor": {
+      "name": "Asanka Ratnayake",
+      "contact": "+94 78 567 8901",
+      "email": "asanka.ratnayake@experiences.lk"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Ayurvedic Spa Retreat",
+    "image": "/images/ayurvedic-spa.jpg",
+    "duration": "Flexible",
+    "availability": "Year-round",
+    "highlight": "Traditional treatments",
+    "description": "Immerse yourself in ancient healing traditions...",
+    "color": "from-teal-500/20 to-teal-600/40",
+    "price": 50,
+    "latitude": 6.8498,
+    "longitude": 79.9272,
+    "experience": "The herbal massage left me feeling lighter and more peaceful than I’ve felt in years.",
+    "instructor": {
+      "name": "Dr. Samanthi Wickramasinghe",
+      "contact": "+94 70 678 9012",
+      "email": "samanthi.wickramasinghe@experiences.lk"
+    }
   }
 ]

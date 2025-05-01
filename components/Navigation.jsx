@@ -62,13 +62,6 @@ export default function NavigationBar() {
                             <Map className="mr-2 h-5 w-5"/>
                             Plan My Trip
                         </Link>
-
-                        <Link
-                            href="/profile"
-                            className="bg-white text-teal-600 p-2 rounded-full hover:bg-teal-100 transition-colors duration-300"
-                        >
-                            <User className="h-6 w-6"/>
-                        </Link>
                     </div>
 
                     {/* Mobile menu button */}

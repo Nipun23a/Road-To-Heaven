@@ -4,164 +4,913 @@
     "name": "Unawatuna Beach",
     "location": "Southern Province",
     "image": "/images/unawatuna.jpg",
+    "latitude": 5.9889,
+    "longitude": 80.2200,
     "rating": 4.8,
     "popularity": "High",
     "description": "Located in the Southern Province of Sri Lanka, Unawatuna Beach is a stunning horseshoe-shaped bay renowned for its golden sands, turquoise waters, and palm-fringed shoreline. Ideal for swimming, snorkeling, and relaxing under the sun, it's a paradise for beach lovers and nature enthusiasts alike. The coral reefs just offshore provide vibrant underwater experiences, while beachfront cafes and restaurants offer delicious seafood and tropical drinks. The nearby Jungle Beach and Japanese Peace Pagoda are popular short hikes, making it a versatile destination for both relaxation and exploration. The best time to visit is from November to April for calm seas and clear skies.",
     "category": "beaches",
-    "bestTime": "November to April"
-  },
+    "bestTime": "November to April",
+    "highlights": [
+      {
+        "icon": "Snorkel",
+        "title": "Snorkeling",
+        "description": "Unawatuna’s coral reefs provide vibrant underwater experiences, perfect for snorkelers to explore."
+      },
+      {
+        "icon": "Swim",
+        "title": "Swimming",
+        "description": "The calm, turquoise waters are ideal for swimming, making it a great destination for all ages."
+      },
+      {
+        "icon": "Hike",
+        "title": "Jungle Beach & Japanese Peace Pagoda",
+        "description": "Enjoy short, scenic hikes to Jungle Beach and the Japanese Peace Pagoda, offering beautiful views of the coastline."
+      },
+      {
+        "icon": "Food",
+        "title": "Beachfront Dining",
+        "description": "Relax with tropical drinks and fresh seafood at the beachfront cafes and restaurants."
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "Unawatuna Beach is a popular destination, so it can get busy during peak seasons. For a more peaceful experience, visit in the early mornings or late afternoons."
+      },
+      "tips": [
+        "Wear reef-safe sunscreen to protect your skin and the coral reefs",
+        "Bring snorkeling gear if you wish to explore the vibrant underwater life",
+        "Don’t miss the short hikes to Jungle Beach and the Japanese Peace Pagoda"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "Free (Some attractions may have a nominal fee)",
+        "locals": "Free"
+      },
+      "openingHours": "24 hours (best visited during daylight hours)",
+      "bestFor": ["Relaxation", "Snorkeling", "Swimming", "Hiking", "Photography"],
+      "contact": {
+        "department": "Unawatuna Tourism Management",
+        "phone": "+94 91 222 2444"
+      }
+    }
+  }
+,
+
   {
     "id": 2,
     "name": "Mirissa Beach",
     "location": "Southern Province",
     "image": "/images/beach.jpg",
+    "latitude": 5.9493,
+    "longitude": 80.5175,
     "rating": 4.7,
     "popularity": "Medium",
     "description": "Nestled along the Southern Province coastline, Mirissa Beach is a tranquil crescent-shaped paradise known for its calm ambiance, golden sands, and breathtaking sunsets. It's a hotspot for whale watching, especially blue whales and dolphins, with boat tours departing daily during peak season. Surfers also flock here for the gentle waves ideal for beginners and intermediates. The palm tree hill and Parrot Rock provide iconic photo ops, while beachfront restaurants serve up delicious seafood under the stars. Whether you're here to surf, relax, or spot marine life, the best time to visit is from December to March for sunny skies and smooth seas.",
     "category": "beaches",
-    "bestTime": "December to March"
-  },
+    "bestTime": "December to March",
+    "highlights": [
+      {
+        "icon": "Whale",
+        "title": "Whale Watching",
+        "description": "Mirissa is famous for whale watching, especially blue whales and dolphins. Boat tours are available daily during the peak season."
+      },
+      {
+        "icon": "Surfing",
+        "title": "Surfing",
+        "description": "With gentle waves, Mirissa is perfect for beginner and intermediate surfers looking to catch a wave."
+      },
+      {
+        "icon": "Photo",
+        "title": "Iconic Views",
+        "description": "The Palm Tree Hill and Parrot Rock offer the best photo opportunities, especially during sunset."
+      },
+      {
+        "icon": "Food",
+        "title": "Beachfront Dining",
+        "description": "Enjoy fresh seafood at the beachfront restaurants while gazing at the sunset over the ocean."
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "Mirissa Beach can get crowded during peak tourist seasons. To avoid the crowds, visit in the early mornings or late afternoons."
+      },
+      "tips": [
+        "Take a boat tour for an unforgettable whale-watching experience",
+        "Wear sunscreen, as the beach can get hot, especially in midday",
+        "Don't forget to bring your camera for the stunning views and sunsets"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "$10 per person (whale watching tour)",
+        "locals": "Rs. 1000 per person"
+      },
+      "openingHours": "24 hours (best visited during daylight hours)",
+      "bestFor": ["Relaxation", "Surfing", "Marine Life", "Photography"],
+      "contact": {
+        "department": "Mirissa Tourism Management",
+        "phone": "+94 41 2253789"
+      }
+    }
+  }
+
+,
   {
     "id": 3,
     "name": "Arugam Bay",
     "location": "Eastern Province",
     "image": "/images/arugam-bay.jpg",
+    "latitude": 6.8590,
+    "longitude": 81.8250,
     "rating": 4.9,
     "popularity": "High",
     "description": "Situated in the Eastern Province, Arugam Bay is a world-renowned surf destination, attracting wave riders from across the globe. Its main surf point offers consistently perfect right-hand breaks, ideal for both seasoned surfers and beginners. Beyond surfing, the laid-back beach town vibe, friendly locals, and vibrant café scene create a welcoming atmosphere. Nature lovers can explore nearby lagoons, mangroves, and even wild elephants in the surrounding wilderness. With music-filled beach nights and peaceful sunrise strolls, Arugam Bay blends adventure with serenity. Visit between May and September to catch the best waves and experience the true charm of this surf haven.",
     "category": "beaches",
-    "bestTime": "May to September"
-  },
+    "bestTime": "May to September (Early morning and late afternoon are ideal for surfing and exploring)",
+    "highlights": [
+      {
+        "icon": "Waves",
+        "title": "Main Point Surf Break",
+        "description": "One of the top surf points in the world with long, consistent right-hand waves suitable for all levels."
+      },
+      {
+        "icon": "Nature",
+        "title": "Lagoon Safaris",
+        "description": "Take a boat ride through nearby lagoons to spot crocodiles, birds, and elephants in their natural habitat."
+      },
+      {
+        "icon": "Beach",
+        "title": "Laid-back Beach Vibe",
+        "description": "Enjoy sunbathing, beach volleyball, and peaceful sunsets with soft golden sands and warm waters."
+      },
+      {
+        "icon": "Nightlife",
+        "title": "Beach Parties & Cafés",
+        "description": "Chill out at beachside cafés, live music spots, and bonfire parties under the stars."
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "While Arugam Bay is safe and friendly, always respect local customs and avoid swimming in rough seas. Sunscreen, hydration, and beachwear are must-haves."
+      },
+      "tips": [
+        "The best surf is early morning or just before sunset — perfect light and fewer crowds",
+        "Rent surfboards and take lessons from certified local instructors if you're a beginner",
+        "Explore nearby attractions like Kumana National Park and Pottuvil Lagoon for more adventure"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "Free (Activities priced separately)",
+        "locals": "Free"
+      },
+      "openingHours": "Accessible all day",
+      "bestFor": ["Surfing", "Nature", "Beach Vibes", "Adventure"],
+      "contact": {
+        "department": "Arugam Bay Tourism Office",
+        "phone": "+94 63 2221234"
+      }
+    }
+  }
+,
   {
     "id": 4,
     "name": "Sigiriya Rock Fortress",
     "location": "Central Province",
     "image": "/images/sigiriya.jpg",
+    "latitude": 7.9575,
+    "longitude": 80.7605,
     "rating": 4.9,
     "popularity": "High",
     "description": "Rising dramatically from the central plains, Sigiriya Rock Fortress is one of Sri Lanka’s most iconic landmarks. Also known as the Lion Rock, it boasts breathtaking frescoes, symmetrical water gardens, and ancient engineering marvels. This UNESCO World Heritage site dates back to the 5th century and was once the royal citadel of King Kashyapa. The climb to the summit rewards visitors with panoramic views of lush forests and surrounding villages. Its cultural and historical significance makes it a must-visit for heritage lovers. Best visited early in the morning to avoid crowds and heat, Sigiriya offers an unforgettable step back in time.",
     "category": "heritage",
-    "bestTime": "Year-round (Early morning recommended)"
-  },
+    "bestTime": "Year-round (Early morning recommended)",
+    "highlights": [
+      {
+        "icon": "Castle",
+        "title": "Lion’s Gate",
+        "description": "The entrance to the rock fortress is guarded by a massive stone lion, which once had its paws and head intact, symbolizing strength and power."
+      },
+      {
+        "icon": "Art",
+        "title": "Frescoes",
+        "description": "Marvel at the ancient frescoes of celestial maidens painted on the rock walls, showcasing Sri Lanka's artistic heritage."
+      },
+      {
+        "icon": "Gardens",
+        "title": "Symmetrical Water Gardens",
+        "description": "Admire the remarkable water gardens and fountains at the base of the rock, demonstrating ancient Sri Lankan engineering and design."
+      },
+      {
+        "icon": "View",
+        "title": "Panoramic Views",
+        "description": "The summit offers 360-degree views of the surrounding forests, villages, and distant mountains, making the climb worth every step."
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "Climbing Sigiriya Rock requires physical effort, so be prepared with comfortable footwear and water. It's advisable to avoid the midday heat by visiting early in the morning."
+      },
+      "tips": [
+        "Start your climb early in the morning to avoid the crowds and the heat",
+        "Wear comfortable shoes as the climb can be challenging in parts",
+        "Don't forget to take a camera for the stunning panoramic views from the top"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "$30 per person",
+        "locals": "Rs. 2000 per person"
+      },
+      "openingHours": "7:00 AM - 5:30 PM daily",
+      "bestFor": ["History", "Culture", "Nature", "Photography"],
+      "contact": {
+        "department": "Sigiriya Rock Fortress Management",
+        "phone": "+94 66 2222988"
+      }
+    }
+  }
+
+,
   {
     "id": 5,
     "name": "Temple of the Tooth",
     "location": "Kandy",
     "image": "/images/temple-tooth.jpg",
+    "latitude": 7.2906,
+    "longitude": 80.6337,
     "rating": 4.8,
     "popularity": "High",
     "description": "Located in the sacred city of Kandy, the Temple of the Tooth (Sri Dalada Maligawa) is one of the holiest Buddhist sites in the world. It houses a relic of the Buddha’s tooth, carefully enshrined in a golden casket and revered by pilgrims and tourists alike. The temple's intricate architecture, spiritual atmosphere, and vibrant rituals captivate visitors daily. The temple complex also includes museums and sacred shrines, showcasing the country’s deep-rooted religious heritage. Especially significant during the Esala Perahera festival, the site remains open year-round, offering a peaceful yet powerful glimpse into Sri Lanka’s spiritual and cultural traditions.",
     "category": "heritage",
-    "bestTime": "Year-round"
-  },
+    "bestTime": "Year-round",
+    "highlights": [
+      {
+        "icon": "Temple",
+        "title": "Sacred Tooth Relic",
+        "description": "The temple enshrines the sacred tooth relic of Buddha, a revered and venerated symbol in Sri Lanka’s Buddhist culture."
+      },
+      {
+        "icon": "Architecture",
+        "title": "Intricate Architecture",
+        "description": "Marvel at the temple’s stunning Kandyan architectural style, with ornate decorations and beautifully crafted wooden carvings."
+      },
+      {
+        "icon": "Festival",
+        "title": "Esala Perahera Festival",
+        "description": "The temple comes alive during the Esala Perahera, a vibrant festival featuring traditional processions, dancers, and musicians, held in July/August."
+      },
+      {
+        "icon": "Cultural",
+        "title": "Cultural Heritage",
+        "description": "Explore the deep cultural and religious heritage of Sri Lanka through the museum, shrines, and rituals held daily at the temple."
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "Dress modestly and respectfully when visiting the temple, as it is a sacred site. Footwear must be removed before entering the temple."
+      },
+      "tips": [
+        "Arrive early in the morning to avoid crowds and experience the morning rituals",
+        "The temple is especially crowded during the Esala Perahera, so plan your visit accordingly",
+        "Take time to explore the temple complex, including the museum and other shrines"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "$10 per person",
+        "locals": "Rs. 1500 per person"
+      },
+      "openingHours": "5:30 AM - 8:00 PM daily",
+      "bestFor": ["Religion", "Culture", "Architecture", "Heritage"],
+      "contact": {
+        "department": "Temple of the Tooth Management",
+        "phone": "+94 81 2231944"
+      }
+    }
+  }
+
+,
   {
     "id": 6,
     "name": "Anuradhapura",
     "location": "North Central Province",
     "image": "/images/anuradhapura.jpg",
+    "latitude": 8.3135,
+    "longitude": 80.4037,
     "rating": 4.7,
     "popularity": "Medium",
     "description": "Anuradhapura, the ancient capital of Sri Lanka, is a sprawling UNESCO World Heritage site located in the North Central Province. Known for its massive stupas, sacred Bodhi tree, ancient monasteries, and intricately carved stone structures, it was a thriving center of Theravada Buddhism for centuries. The city is home to some of the oldest continuously inhabited religious sites in the world, such as Ruwanwelisaya and Jetavanaramaya. The tranquil surroundings and historical ruins invite contemplation and exploration. While it can be visited year-round, the ideal time is between May and September when the weather is relatively dry and perfect for sightseeing.",
     "category": "heritage",
-    "bestTime": "Year-round (May to September ideal)"
-  },
+    "bestTime": "Year-round (May to September ideal)",
+    "highlights": [
+      {
+        "icon": "Stupa",
+        "title": "Ancient Stupas",
+        "description": "Visit the massive stupas, like Ruwanwelisaya and Jetavanaramaya, which are among the oldest and most impressive in the world."
+      },
+      {
+        "icon": "Bodhi",
+        "title": "Sacred Bodhi Tree",
+        "description": "The Sri Maha Bodhi tree is a sacred relic, believed to be a sapling from the original tree under which Buddha attained enlightenment."
+      },
+      {
+        "icon": "Temple",
+        "title": "Ancient Temples",
+        "description": "Explore the well-preserved ancient monasteries and intricately carved temples that offer insight into Sri Lanka's rich Buddhist heritage."
+      },
+      {
+        "icon": "Heritage",
+        "title": "UNESCO World Heritage",
+        "description": "Anuradhapura is designated as a UNESCO World Heritage site, known for its historical significance and archaeological treasures."
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "Anuradhapura can get quite hot, especially during the midday hours. Bring plenty of water, wear comfortable shoes, and a hat for sun protection."
+      },
+      "tips": [
+        "Plan to visit early in the morning or late in the afternoon to avoid the heat",
+        "Respect the religious sites and dress modestly when entering temples",
+        "Hire a guide to get the most out of the historical and cultural information",
+        "Be mindful of the sacred nature of the Bodhi tree and other holy sites"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "$25 per person",
+        "locals": "Rs. 1500 per person"
+      },
+      "openingHours": "6:00 AM - 6:00 PM daily",
+      "bestFor": ["History", "Culture", "Buddhism", "Sightseeing"],
+      "contact": {
+        "department": "Department of Archaeology",
+        "phone": "+94 25 2222244"
+      }
+    }
+  }
+
+,
   {
     "id": 7,
     "name": "Yala National Park",
     "location": "Southern Province",
     "image": "/images/yala.jpg",
+    "latitude": 6.8804,
+    "longitude": 81.6040,
     "rating": 4.8,
     "popularity": "High",
     "description": "Yala National Park, located in the Southern Province, is Sri Lanka’s most famous wildlife sanctuary, celebrated for having one of the highest leopard densities in the world. The park’s diverse ecosystems—ranging from dense jungles to open grasslands and coastal lagoons—host a wide array of animals, including elephants, sloth bears, crocodiles, and hundreds of bird species. Safari jeeps take visitors deep into the wild, offering thrilling close-up encounters with nature. Its dramatic scenery and rich biodiversity make it a must for nature lovers and photographers. Visit between February and July for the best chance to see wildlife in their natural habitat.",
     "category": "wildlife",
-    "bestTime": "February to July"
-  },
+    "bestTime": "February to July",
+    "highlights": [
+      {
+        "icon": "Leopard",
+        "title": "Leopard Sightings",
+        "description": "Yala is renowned for its high leopard density, making leopard sightings a must-see experience"
+      },
+      {
+        "icon": "Safari",
+        "title": "Safari Experience",
+        "description": "Thrilling jeep safaris allow close encounters with a variety of wildlife, including elephants and sloth bears"
+      },
+      {
+        "icon": "Bird",
+        "title": "Bird Watching",
+        "description": "The park is home to hundreds of bird species, offering great birdwatching opportunities"
+      },
+      {
+        "icon": "Coast",
+        "title": "Coastal Lagoons",
+        "description": "Explore Yala’s unique coastal lagoons that add to its diverse ecosystems"
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "Yala National Park is very popular, especially during peak tourist seasons. Arrive early to secure a safari slot."
+      },
+      "tips": [
+        "Book your safari in advance, as slots can fill up quickly",
+        "Carry binoculars and a camera for excellent wildlife photography",
+        "Wear light, neutral-colored clothing to blend with the environment",
+        "Respect the park's wildlife and maintain a safe distance from animals"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "$30 per person",
+        "locals": "Rs. 5000 per person"
+      },
+      "openingHours": "6:00 AM - 6:00 PM daily",
+      "bestFor": ["Wildlife", "Safari", "Photography", "Nature"],
+      "contact": {
+        "department": "Department of Wildlife Conservation",
+        "phone": "+94 11 2888585"
+      }
+    }
+  }
+,
   {
     "id": 8,
     "name": "Udawalawe National Park",
     "location": "Sabaragamuwa Province",
     "image": "/images/udawalawe.jpg",
+    "latitude": 6.6977,
+    "longitude": 80.9933,
     "rating": 4.7,
     "popularity": "Medium",
     "description": "Located on the boundary of Sabaragamuwa and Uva provinces, Udawalawe National Park is famed for its large elephant population, often seen roaming in herds across open grasslands. The park's landscape of reservoirs, marshes, and forests makes it ideal for birdwatching and spotting animals like water buffaloes, deer, and jackals. Unlike Yala, the terrain here is more open, offering better visibility for wildlife photography. It’s also home to the Udawalawe Elephant Transit Home, where orphaned elephants are rehabilitated. Accessible year-round, Udawalawe promises a serene yet thrilling safari experience, especially appealing for those looking for intimate encounters with Sri Lanka’s majestic elephants.",
     "category": "wildlife",
-    "bestTime": "Year-round"
-  },
+    "bestTime": "Year-round",
+    "highlights": [
+      {
+        "icon": "Elephant",
+        "title": "Elephant Herds",
+        "description": "Spot large herds of elephants roaming across open grasslands"
+      },
+      {
+        "icon": "Camera",
+        "title": "Wildlife Photography",
+        "description": "The open landscape offers excellent opportunities for wildlife photography"
+      },
+      {
+        "icon": "Users",
+        "title": "Elephant Transit Home",
+        "description": "Visit the Elephant Transit Home where orphaned elephants are rehabilitated"
+      },
+      {
+        "icon": "Navigation",
+        "title": "Birdwatching",
+        "description": "The park's diverse landscapes make it a great location for birdwatching"
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "Udawalawe National Park is open year-round, but early morning and late afternoon safaris are recommended for the best wildlife sightings."
+      },
+      "tips": [
+        "Carry binoculars and a camera for the best wildlife sightings and photography",
+        "Wear neutral-colored clothing to avoid disturbing wildlife",
+        "Stay hydrated as safaris can be long and the weather can be warm",
+        "Be respectful of the park’s wildlife, especially the elephants"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "$20 per person",
+        "locals": "Rs. 1000 per person"
+      },
+      "openingHours": "6:00 AM - 6:00 PM daily",
+      "bestFor": ["Wildlife", "Safari", "Photography", "Nature"],
+      "contact": {
+        "department": "Department of Wildlife Conservation",
+        "phone": "+94 11 2888585"
+      }
+    }
+  }
+
+,
   {
     "id": 9,
     "name": "Minneriya National Park",
     "location": "North Central Province",
     "image": "/images/minneriya.jpg",
+    "latitude": 8.3056,
+    "longitude": 80.9297,
     "rating": 4.6,
     "popularity": "Medium",
     "description": "Minneriya National Park, nestled in Sri Lanka’s Cultural Triangle, is renowned for “The Gathering,” an extraordinary wildlife spectacle where hundreds of Asian elephants congregate near the Minneriya Tank during the dry season. This phenomenon, occurring between August and September, is considered one of the world’s greatest wildlife experiences. The park also hosts deer, crocodiles, monkeys, and vibrant birdlife in a mix of grasslands, wetlands, and forest. Jeep safaris offer visitors a chance to witness elephants in social herds, often bathing, playing, or feeding together. For those seeking a magical wildlife encounter, Minneriya delivers unforgettable moments in a natural paradise.",
     "category": "wildlife",
-    "bestTime": "August to September"
-  },
+    "bestTime": "August to September",
+    "highlights": [
+      {
+        "icon": "Elephant",
+        "title": "The Gathering",
+        "description": "Hundreds of elephants gather near the Minneriya Tank during the dry season"
+      },
+      {
+        "icon": "Camera",
+        "title": "Wildlife Photography",
+        "description": "Excellent opportunities to photograph elephants and other wildlife"
+      },
+      {
+        "icon": "Clock",
+        "title": "Safari Duration",
+        "description": "Half-day and full-day jeep safaris available"
+      },
+      {
+        "icon": "Users",
+        "title": "Social Herds",
+        "description": "Witness elephants in large social groups, often playing and bathing together"
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "It’s best to visit during the dry season (August to September) for The Gathering, as elephants are more concentrated around the Minneriya Tank."
+      },
+      "tips": [
+        "Book your safari in advance to secure a spot during peak seasons",
+        "Bring binoculars and a camera for the best wildlife sightings",
+        "Wear comfortable clothing and shoes suitable for jeep safaris",
+        "Be patient, as the best wildlife moments can happen unexpectedly",
+        "Respect the animals and avoid disturbing their natural behaviors"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "$20 per person",
+        "locals": "Rs. 1000 per person"
+      },
+      "openingHours": "6:00 AM - 6:00 PM daily",
+      "bestFor": ["Wildlife", "Safari", "Photography", "Nature"],
+      "contact": {
+        "department": "Department of Wildlife Conservation",
+        "phone": "+94 11 2888585"
+      }
+    }
+  }
+
+,
   {
     "id": 10,
     "name": "Ella Rock",
     "location": "Uva Province",
     "image": "/images/ella-rock.jpg",
+    "latitude": 6.8526,
+    "longitude": 81.0462,
     "rating": 4.7,
     "popularity": "Medium",
     "description": "Perched high in the Uva Province, Ella Rock is a hiker’s paradise offering one of the most rewarding treks in Sri Lanka. The trail, which winds through tea plantations, eucalyptus forests, and misty hills, leads to a summit with sweeping views of the Ella Gap, Little Adam’s Peak, and the surrounding valley. Along the way, local encounters, railway tracks, and wildflowers enrich the journey. The climb can be challenging but is worth every step for sunrise or sunset vistas. Visit between January and March for clear skies and cool temperatures, making the adventure even more enjoyable for trekking enthusiasts.",
     "category": "adventure",
-    "bestTime": "January to March"
-  },
+    "bestTime": "January to March",
+    "highlights": [
+      {
+        "icon": "Hiking",
+        "title": "Challenging Hike",
+        "description": "A rewarding trek with scenic views along the way"
+      },
+      {
+        "icon": "Sunrise",
+        "title": "Sunrise Views",
+        "description": "The summit offers stunning sunrise and sunset vistas"
+      },
+      {
+        "icon": "Leaf",
+        "title": "Tea Plantations",
+        "description": "The trail passes through lush tea plantations and forests"
+      },
+      {
+        "icon": "Track",
+        "title": "Railway Tracks",
+        "description": "Encounter historic railway tracks along the way"
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "The trail can be steep and slippery, so wear proper hiking shoes and take caution during wet conditions."
+      },
+      "tips": [
+        "Start early to catch the stunning sunrise",
+        "Pack water and snacks for the trek",
+        "Wear light, breathable clothing, and don’t forget sunscreen",
+        "Carry a camera to capture the panoramic views",
+        "Be cautious on slippery parts of the trail"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "$10 per person",
+        "locals": "Rs. 500 per person"
+      },
+      "openingHours": "6:00 AM - 6:00 PM daily",
+      "bestFor": ["Trekking", "Adventure", "Photography", "Nature"],
+      "contact": {
+        "department": "Ella Trekking Tours",
+        "phone": "+94 81 234 5678"
+      }
+    }
+  }
+
+,
   {
     "id": 11,
     "name": "Kitulgala",
     "location": "Western Province",
     "image": "/images/kithulgala.jpg",
+    "latitude": 6.9883,
+    "longitude": 80.4264,
     "rating": 4.8,
     "popularity": "Medium",
     "description": "Kitulgala, nestled in the lush rainforests of the Western Province, is the ultimate destination for thrill-seekers and nature lovers. Known for its white-water rafting along the Kelani River, the town also offers jungle trekking, waterfall abseiling, cave exploration, and birdwatching in its biodiverse surroundings. It’s also the famous filming location of the classic movie The Bridge on the River Kwai. With its emerald-green canopy and refreshing natural pools, Kitulgala is perfect for a weekend escape into nature. The best time to visit is from May to December, avoiding the heavy monsoon, for an adrenaline-packed and scenic adventure.",
     "category": "adventure",
-    "bestTime": "May to December (except monsoon)"
-  },
+    "bestTime": "May to December (except monsoon)",
+    "highlights": [
+      {
+        "icon": "Rafting",
+        "title": "White-water Rafting",
+        "description": "Thrilling rafting experience on the Kelani River"
+      },
+      {
+        "icon": "Clock",
+        "title": "Adventure Duration",
+        "description": "Half-day and full-day adventure packages available"
+      },
+      {
+        "icon": "Tree",
+        "title": "Jungle Trekking",
+        "description": "Explore Kitulgala’s lush rainforests with expert guides"
+      },
+      {
+        "icon": "Camera",
+        "title": "Birdwatching",
+        "description": "Spot unique bird species in Kitulgala’s biodiverse environment"
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "Rafting requires prior booking and is only available during safe water levels."
+      },
+      "tips": [
+        "Bring quick-dry clothing for water activities",
+        "Wear sturdy shoes for trekking and abseiling",
+        "Take a waterproof camera for capturing adventure moments",
+        "Pack insect repellent as the area is lush and can have mosquitoes",
+        "Visit in the early morning or late afternoon for the best birdwatching opportunities"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "$25 per person",
+        "locals": "Rs. 1500 per person"
+      },
+      "openingHours": "9:00 AM - 5:00 PM daily",
+      "bestFor": ["Adventure", "Rafting", "Trekking", "Nature"],
+      "contact": {
+        "department": "Kitulgala Adventure Tours",
+        "phone": "+94 81 238 1800"
+      }
+    }
+  }
+
+,
   {
     "id": 12,
     "name": "Knuckles Mountain Range",
     "location": "Central Province",
     "image": "/images/knuckles.jpg",
+    "latitude": 7.4500,
+    "longitude": 80.8000,
     "rating": 4.9,
     "popularity": "Low",
     "description": "The Knuckles Mountain Range, a UNESCO World Heritage site in Central Sri Lanka, is a haven for hikers, eco-tourists, and adventure lovers. Named for its resemblance to a clenched fist, this remote and rugged terrain is rich with biodiversity, cloud forests, cascading waterfalls, and scenic valleys. It’s home to rare flora and fauna and offers trails of varying difficulty, from short treks to multi-day hikes. The area also shelters traditional villages where visitors can experience authentic rural life. Best explored between January and March, the Knuckles Range is ideal for those seeking solitude, serenity, and soul-stirring natural beauty.",
     "category": "adventure",
-    "bestTime": "January to March"
-  },
+    "bestTime": "January to March",
+    "highlights": [
+      {
+        "icon": "Mountain",
+        "title": "Hiking Trails",
+        "description": "Varied difficulty trails offering stunning views and diverse ecosystems"
+      },
+      {
+        "icon": "Clock",
+        "title": "Hike Duration",
+        "description": "Both short treks and multi-day hikes available"
+      },
+      {
+        "icon": "Droplet",
+        "title": "Waterfalls",
+        "description": "Explore cascading waterfalls nestled within the mountains"
+      },
+      {
+        "icon": "Users",
+        "title": "Rural Experience",
+        "description": "Discover traditional villages and experience local rural life"
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "Carry sufficient water, wear sturdy shoes, and be prepared for sudden weather changes in the mountains."
+      },
+      "tips": [
+        "Bring a good camera to capture the breathtaking landscapes",
+        "Wear layered clothing for comfort in varying temperatures",
+        "Stay on marked trails to protect the fragile ecosystem",
+        "Respect the local culture and engage with villagers respectfully",
+        "Prepare for long treks, and pack enough food for longer hikes"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "$20 per person",
+        "locals": "Rs. 1000 per person"
+      },
+      "openingHours": "6:00 AM - 6:00 PM daily",
+      "bestFor": ["Adventure", "Hiking", "Nature", "Eco-tourism"],
+      "contact": {
+        "department": "Department of Wildlife Conservation",
+        "phone": "+94 81 222 2299"
+      }
+    }
+  }
+
+,
   {
     "id": 13,
     "name": "Hikkaduwa Beach",
     "location": "Southern Province",
     "image": "/images/beach.jpg",
+    "latitude": 6.1406,
+    "longitude": 80.1018,
     "rating": 4.5,
     "popularity": "High",
-    "description": "Hikkaduwa Beach, located on the southwest coast, is one of Sri Lanka’s most lively and colorful beach towns. Famous for its coral sanctuary, snorkeling spots, and surfable waves, the beach offers a mix of aquatic adventure and relaxed island vibes. The vibrant nightlife, seafood restaurants, and beachfront bars make it a hotspot for both locals and tourists. You can swim with turtles, explore marine life, or simply bask in the tropical sun. The best time to visit is from November to April when the sea is calm, and the weather is warm—ideal for both thrill-seekers and sun-chasers alike.\n",
+    "description": "Hikkaduwa Beach, located on the southwest coast, is one of Sri Lanka’s most lively and colorful beach towns. Famous for its coral sanctuary, snorkeling spots, and surfable waves, the beach offers a mix of aquatic adventure and relaxed island vibes. The vibrant nightlife, seafood restaurants, and beachfront bars make it a hotspot for both locals and tourists. You can swim with turtles, explore marine life, or simply bask in the tropical sun. The best time to visit is from November to April when the sea is calm, and the weather is warm—ideal for both thrill-seekers and sun-chasers alike.",
     "category": "beaches",
-    "bestTime": "November to April"
-  },
+    "bestTime": "November to April",
+    "highlights": [
+      {
+        "icon": "Camera",
+        "title": "Underwater Photography",
+        "description": "Great opportunities for capturing marine life and coral reefs"
+      },
+      {
+        "icon": "Clock",
+        "title": "Snorkeling Duration",
+        "description": "Short and long snorkeling tours available"
+      },
+      {
+        "icon": "Anchor",
+        "title": "Surfing",
+        "description": "Catch the waves at one of the best surfing spots on the island"
+      },
+      {
+        "icon": "Users",
+        "title": "Vibrant Nightlife",
+        "description": "Enjoy beachfront bars, seafood restaurants, and lively nightlife"
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "Snorkeling gear and surfboards can be rented from local shops along the beach."
+      },
+      "tips": [
+        "Bring waterproof sunscreen and a hat to protect from the sun",
+        "Snorkel in the early morning or late afternoon for the best marine life sightings",
+        "Stay hydrated and carry water with you",
+        "Respect the local marine environment and avoid touching the coral reefs",
+        "Be cautious when swimming as the sea can get rough during the off-season (May to October)"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "$10 per person",
+        "locals": "Rs. 500 per person"
+      },
+      "openingHours": "24 hours (best time for activities: 6:00 AM - 6:00 PM)",
+      "bestFor": ["Beaches", "Surfing", "Snorkeling", "Nightlife"],
+      "contact": {
+        "department": "Sri Lanka Tourism Development Authority",
+        "phone": "+94 91 227 4888"
+      }
+    }
+  }
+
+,
   {
     "id": 14,
     "name": "Polonnaruwa",
     "location": "North Central Province",
     "image": "/images/anuradhapura.jpg",
+    "latitude": 7.9396,
+    "longitude": 81.0036,
     "rating": 4.7,
     "popularity": "Medium",
     "description": "Polonnaruwa, once the medieval capital of Sri Lanka, is a treasure trove of ancient ruins, historical temples, and impressive Buddhist statues. This UNESCO World Heritage site features well-preserved architecture from the 11th and 12th centuries, including the famous Gal Vihara rock carvings and the majestic Royal Palace complex. The city’s neatly organized layout, ancient irrigation systems, and scenic surroundings reflect its golden era of urban planning and spirituality. Rent a bicycle and explore the sprawling complex at your own pace. Open year-round, Polonnaruwa offers a peaceful and awe-inspiring experience for history buffs and culture enthusiasts alike.",
     "category": "heritage",
-    "bestTime": "Year-round"
-  },
+    "bestTime": "Year-round",
+    "highlights": [
+      {
+        "icon": "Camera",
+        "title": "Cultural Photography",
+        "description": "Fantastic opportunities to capture the ancient ruins and statues"
+      },
+      {
+        "icon": "Clock",
+        "title": "Tour Duration",
+        "description": "Half-day and full-day tours available"
+      },
+      {
+        "icon": "MapPin",
+        "title": "Historical Sites",
+        "description": "Explore the iconic Gal Vihara rock carvings and Royal Palace complex"
+      },
+      {
+        "icon": "Users",
+        "title": "Less Crowded",
+        "description": "A peaceful experience compared to more popular sites"
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "Bicycle rentals are available near the entrance. Guided tours can be arranged."
+      },
+      "tips": [
+        "Rent a bicycle to explore the area more efficiently",
+        "Carry a hat, sunscreen, and water for protection from the sun",
+        "Visit early in the morning or late afternoon for cooler temperatures",
+        "Respect local customs when visiting temples and historical sites",
+        "Wear comfortable clothing and shoes as you'll be walking and cycling a lot"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "$25 per person",
+        "locals": "Rs. 1000 per person"
+      },
+      "openingHours": "6:00 AM - 6:00 PM daily",
+      "bestFor": ["History", "Culture", "Photography", "Cycling"],
+      "contact": {
+        "department": "Department of Archaeology",
+        "phone": "+94 27 222 2444"
+      }
+    }
+  }
+
+,
   {
     "id": 15,
     "name": "Wilpattu National Park",
     "location": "North Western Province",
     "image": "/images/yala.jpg",
+    "latitude": 8.4828,
+    "longitude": 80.0018,
     "rating": 4.6,
     "popularity": "Low",
-    "description": "Wilpattu National Park, Sri Lanka’s largest and oldest wildlife reserve, is known for its unique \"willus\"—natural sand-rimmed water basins—and its serene, untouched landscapes. Located in the North Western Province, the park is a refuge for elusive leopards, sloth bears, elephants, and abundant birdlife. Unlike other parks, Wilpattu’s charm lies in its quietude and lack of tourist crowds, providing a more intimate safari experience. Jeep safaris traverse through dense forests, open plains, and shimmering lakes, offering excellent chances to spot wildlife in peace. The best time to visit is between February and October when the park is lush and animals are most active.",
+    "description": "Wilpattu National Park, Sri Lanka's largest and oldest wildlife reserve, is known for its unique \"willus\"—natural sand-rimmed water basins—and its serene, untouched landscapes. Located in the North Western Province, the park is a refuge for elusive leopards, sloth bears, elephants, and abundant birdlife. Unlike other parks, Wilpattu's charm lies in its quietude and lack of tourist crowds, providing a more intimate safari experience. Jeep safaris traverse through dense forests, open plains, and shimmering lakes, offering excellent chances to spot wildlife in peace. The best time to visit is between February and October when the park is lush and animals are most active.",
     "category": "wildlife",
-    "bestTime": "February to October"
+    "bestTime": "February to October",
+    "highlights": [
+      {
+        "icon": "Camera",
+        "title": "Wildlife Photography",
+        "description": "Exceptional opportunities to photograph leopards and other wildlife"
+      },
+      {
+        "icon": "Clock",
+        "title": "Safari Duration",
+        "description": "Half-day and full-day safaris available"
+      },
+      {
+        "icon": "Navigation",
+        "title": "Natural Willus",
+        "description": "Unique sand-rimmed natural lakes that attract diverse wildlife"
+      },
+      {
+        "icon": "Users",
+        "title": "Less Crowded",
+        "description": "Quieter safari experience compared to other national parks"
+      }
+    ],
+    "visitorTips": {
+      "notice": {
+        "title": "Important Notice",
+        "text": "Entry permits must be obtained in advance. Safari jeeps can be arranged at the entrance or through your accommodation."
+      },
+      "tips": [
+        "Bring binoculars for better wildlife spotting",
+        "Early morning safaris (6 AM) offer the best chance to see leopards",
+        "Pack water, snacks, and sun protection as safari trips can last several hours",
+        "Wear neutral-colored clothing to avoid disturbing wildlife",
+        "Stay 2-3 days for the best experience as wildlife sightings can be unpredictable"
+      ]
+    },
+    "quickInfo": {
+      "entryFee": {
+        "foreigners": "$15 per person",
+        "locals": "Rs. 60 per person"
+      },
+      "openingHours": "6:00 AM - 6:00 PM daily",
+      "bestFor": ["Wildlife", "Safari", "Photography", "Nature"],
+      "contact": {
+        "department": "Department of Wildlife Conservation",
+        "phone": "+94 11 2888585"
+      }
+    }
   }
+
 ]

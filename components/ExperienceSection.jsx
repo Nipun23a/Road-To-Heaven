@@ -1,81 +1,21 @@
-'use client'
+"use client"
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
-import {Calendar, Clock, Award, ArrowRight, Map} from 'lucide-react';
-import { montserrat, whisper } from "@/app/layout";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Clock, Calendar, Award, ArrowRight, Map } from 'lucide-react';
+import { montserrat, whisper } from '@/app/layout';
+import experiencesData from '../data/json/experiences.json';
 
 export default function ExperiencesSection() {
     const [mounted, setMounted] = useState(false);
     const [visibleCard, setVisibleCard] = useState(null);
+    const [experiences, setExperiences] = useState([]);
 
     useEffect(() => {
         setMounted(true);
+        setExperiences(experiencesData);
     }, []);
-
-    const experiences = [
-        {
-            id: 1,
-            title: 'Tea Plantation Tour',
-            image: '/images/tea-experience.jpg',
-            duration: '4 hours',
-            availability: 'Year-round',
-            highlight: 'Tea tasting included',
-            description: 'Explore the lush tea plantations of Nuwara Eliya and learn about the tea-making process from leaf to cup. Enjoy panoramic views of rolling hills covered in tea bushes.',
-            color: 'from-green-500/20 to-green-600/40'
-        },
-        {
-            id: 2,
-            title: 'Traditional Cooking Class',
-            image: '/images/cooking-class.jpg',
-            duration: '3 hours',
-            availability: 'Daily',
-            highlight: 'Market visit included',
-            description: 'Learn to prepare authentic Sri Lankan curry, rice, and roti dishes with local spices. Visit a local market to select fresh ingredients before your hands-on cooking session.',
-            color: 'from-orange-500/20 to-orange-600/40'
-        },
-        {
-            id: 3,
-            title: 'Elephant Safari',
-            image: '/images/elephant-safari.jpg',
-            duration: 'Half day',
-            availability: 'Year-round',
-            highlight: 'Ethical wildlife viewing',
-            description: 'Observe majestic elephants in their natural habitat during a guided jeep safari in Udawalawe National Park, home to hundreds of wild elephants.',
-            color: 'from-gray-500/20 to-gray-600/40'
-        },
-        {
-            id: 4,
-            title: 'Ancient City Cycling Tour',
-            image: '/images/cycling-tour.jpg',
-            duration: '5 hours',
-            availability: 'Except monsoon season',
-            highlight: 'Professional guides',
-            description: 'Cycle through the ancient city of Polonnaruwa, exploring temple ruins, massive stone Buddhas, and royal palaces at a leisurely pace.',
-            color: 'from-blue-500/20 to-blue-600/40'
-        },
-        {
-            id: 5,
-            title: 'Sunrise Adam\'s Peak Hike',
-            image: '/images/adams-peak.jpg',
-            duration: '6-7 hours',
-            availability: 'December to May',
-            highlight: 'Spiritual experience',
-            description: 'Climb the sacred Adam\'s Peak by night to witness a spectacular sunrise from the summit, an important pilgrimage site for multiple religions.',
-            color: 'from-purple-500/20 to-purple-600/40'
-        },
-        {
-            id: 6,
-            title: 'Ayurvedic Spa Retreat',
-            image: '/images/ayurvedic-spa.jpg',
-            duration: 'Flexible',
-            availability: 'Year-round',
-            highlight: 'Traditional treatments',
-            description: 'Immerse yourself in ancient healing traditions with authentic Ayurvedic treatments using local herbs and oils at a specialized wellness retreat.',
-            color: 'from-teal-500/20 to-teal-600/40'
-        }
-    ];
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -194,14 +134,19 @@ export default function ExperiencesSection() {
                                 </p>
 
                                 <motion.div
-                                    initial={{ opacity: 0.8 }}
-                                    animate={{ opacity: visibleCard === experience.id ? 1 : 0.8 }}
-                                    transition={{ duration: 0.3 }}
+                                    initial={{opacity: 0.8}}
+                                    animate={{opacity: visibleCard === experience.id ? 1 : 0.8}}
+                                    transition={{duration: 0.3}}
                                 >
-                                    <button className={`${montserrat.className} flex items-center justify-center w-full bg-teal-500 hover:bg-teal-600 text-white py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105`}>
-                                        Book This Experience
-                                        <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                                    </button>
+                                    <Link href={`places/experiences/${experience.id}`}>
+                                        <button
+                                            className={`${montserrat.className} flex items-center justify-center w-full bg-teal-500 hover:bg-teal-600 text-white py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105`}
+                                        >
+                                            View Experience
+                                            <ArrowRight size={18}
+                                                        className="ml-2 group-hover:translate-x-1 transition-transform duration-300"/>
+                                        </button>
+                                    </Link>
                                 </motion.div>
                             </div>
                         </motion.div>
@@ -210,9 +155,9 @@ export default function ExperiencesSection() {
 
                 {/* Feature callout */}
                 <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
+                    initial={{opacity: 0, y: 40}}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{duration: 0.6, delay: 0.3}}
                     viewport={{ once: true }}
                     className="mt-16 bg-gradient-to-r from-teal-500 to-teal-700 rounded-2xl p-8 md:p-12 text-white shadow-xl"
                 >
@@ -225,7 +170,6 @@ export default function ExperiencesSection() {
                             </p>
                         </div>
                         <div className="flex-shrink-0">
-
                             <Link className={`${montserrat.className} bg-white text-teal-600 hover:bg-teal-50 px-6 py-4 rounded-lg font-medium text-lg flex items-center shadow-lg hover:shadow-xl transition-all duration-300`} href='/plan-trip'>
                                 <Map size={20} className="mr-2" />
                                 Plan Custom Trip
